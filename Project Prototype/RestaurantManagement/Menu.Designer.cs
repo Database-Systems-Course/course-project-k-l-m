@@ -65,6 +65,7 @@
             this.button_AddStaff.TabIndex = 7;
             this.button_AddStaff.Text = "Add Staff";
             this.button_AddStaff.UseVisualStyleBackColor = true;
+            this.button_AddStaff.Click += new System.EventHandler(this.button_AddStaff_Click);
             // 
             // button_SearchStaff
             // 
@@ -75,6 +76,7 @@
             this.button_SearchStaff.TabIndex = 8;
             this.button_SearchStaff.Text = "Search Staff";
             this.button_SearchStaff.UseVisualStyleBackColor = true;
+            this.button_SearchStaff.Click += new System.EventHandler(this.button_SearchStaff_Click);
             // 
             // Menu
             // 

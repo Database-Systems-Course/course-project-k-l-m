@@ -30,5 +30,21 @@ namespace RestaurantManagement
             this.Hide();
             Form.Show();
         }
+
+        private void button_AddStaff_Click(object sender, EventArgs e)
+        {
+            AddStaff Form = new AddStaff();
+            this.Hide();
+            Form.Show();
+
+        }
+
+        private void button_SearchStaff_Click(object sender, EventArgs e)
+        {
+            SearchStaff Form = new SearchStaff();
+            this.Hide();
+            Form.Show();
+
+        }
     }
 }
