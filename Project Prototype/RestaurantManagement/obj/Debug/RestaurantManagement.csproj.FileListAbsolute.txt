@@ -1,0 +1,10 @@
+C:\Users\ncc\course-project-k-l-m\Project Prototype\RestaurantManagement\bin\Debug\RestaurantManagement.exe.config
+C:\Users\ncc\course-project-k-l-m\Project Prototype\RestaurantManagement\bin\Debug\RestaurantManagement.exe
+C:\Users\ncc\course-project-k-l-m\Project Prototype\RestaurantManagement\bin\Debug\RestaurantManagement.pdb
+C:\Users\ncc\course-project-k-l-m\Project Prototype\RestaurantManagement\obj\Debug\RestaurantManagement.csprojAssemblyReference.cache
+C:\Users\ncc\course-project-k-l-m\Project Prototype\RestaurantManagement\obj\Debug\RestaurantManagement.Menu.resources
+C:\Users\ncc\course-project-k-l-m\Project Prototype\RestaurantManagement\obj\Debug\RestaurantManagement.Login.resources
+C:\Users\ncc\course-project-k-l-m\Project Prototype\RestaurantManagement\obj\Debug\RestaurantManagement.Properties.Resources.resources
+C:\Users\ncc\course-project-k-l-m\Project Prototype\RestaurantManagement\obj\Debug\RestaurantManagement.csproj.GenerateResource.cache
+C:\Users\ncc\course-project-k-l-m\Project Prototype\RestaurantManagement\obj\Debug\RestaurantManagement.exe
+C:\Users\ncc\course-project-k-l-m\Project Prototype\RestaurantManagement\obj\Debug\RestaurantManagement.pdb
