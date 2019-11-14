@@ -34,7 +34,6 @@
             this.label_Password = new System.Windows.Forms.Label();
             this.button_Login = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
-            this.button_Register = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // label_UserName
@@ -73,7 +72,7 @@
             // 
             // button_Login
             // 
-            this.button_Login.Location = new System.Drawing.Point(203, 206);
+            this.button_Login.Location = new System.Drawing.Point(328, 215);
             this.button_Login.Name = "button_Login";
             this.button_Login.Size = new System.Drawing.Size(92, 39);
             this.button_Login.TabIndex = 4;
@@ -92,23 +91,11 @@
             this.label3.Text = "Restaurant Management System";
             this.label3.Click += new System.EventHandler(this.Label3_Click);
             // 
-            // button_Register
-            // 
-            this.button_Register.Location = new System.Drawing.Point(321, 206);
-            this.button_Register.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.button_Register.Name = "button_Register";
-            this.button_Register.Size = new System.Drawing.Size(100, 39);
-            this.button_Register.TabIndex = 6;
-            this.button_Register.Text = "Register";
-            this.button_Register.UseVisualStyleBackColor = true;
-            this.button_Register.Click += new System.EventHandler(this.button2_Click);
-            // 
             // Login
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 19F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(533, 317);
-            this.Controls.Add(this.button_Register);
+            this.ClientSize = new System.Drawing.Size(527, 301);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.button_Login);
             this.Controls.Add(this.textbox_Password);
@@ -131,7 +118,6 @@
         private System.Windows.Forms.Label label_Password;
         private System.Windows.Forms.Button button_Login;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Button button_Register;
     }
 }
 

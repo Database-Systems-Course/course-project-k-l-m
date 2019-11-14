@@ -24,6 +24,12 @@ namespace RestaurantManagement
 
         private void button1_Click(object sender, EventArgs e)
         {
+            // we will put a check after connecting forms to database
+            //on click we will check whether the login id and password exists in databse
+            Menu Form = new Menu();
+            this.Hide();
+            Form.Show();
+
 
         }
 

@@ -28,58 +28,63 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
+            this.button_AddOrder = new System.Windows.Forms.Button();
+            this.button_SearchOrder = new System.Windows.Forms.Button();
+            this.button_AddStaff = new System.Windows.Forms.Button();
+            this.button_SearchStaff = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
-            // button1
+            // button_AddOrder
             // 
-            this.button1.Location = new System.Drawing.Point(299, 71);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(178, 51);
-            this.button1.TabIndex = 5;
-            this.button1.Text = "Add Order";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.Button1_Click);
+            this.button_AddOrder.Location = new System.Drawing.Point(150, 37);
+            this.button_AddOrder.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.button_AddOrder.Name = "button_AddOrder";
+            this.button_AddOrder.Size = new System.Drawing.Size(89, 27);
+            this.button_AddOrder.TabIndex = 5;
+            this.button_AddOrder.Text = "Add Order";
+            this.button_AddOrder.UseVisualStyleBackColor = true;
+            this.button_AddOrder.Click += new System.EventHandler(this.Button1_Click);
             // 
-            // button2
+            // button_SearchOrder
             // 
-            this.button2.Location = new System.Drawing.Point(299, 147);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(178, 51);
-            this.button2.TabIndex = 6;
-            this.button2.Text = "Search Order";
-            this.button2.UseVisualStyleBackColor = true;
+            this.button_SearchOrder.Location = new System.Drawing.Point(150, 76);
+            this.button_SearchOrder.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.button_SearchOrder.Name = "button_SearchOrder";
+            this.button_SearchOrder.Size = new System.Drawing.Size(89, 27);
+            this.button_SearchOrder.TabIndex = 6;
+            this.button_SearchOrder.Text = "Search Order";
+            this.button_SearchOrder.UseVisualStyleBackColor = true;
             // 
-            // button3
+            // button_AddStaff
             // 
-            this.button3.Location = new System.Drawing.Point(299, 222);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(178, 51);
-            this.button3.TabIndex = 7;
-            this.button3.Text = "Add Staff";
-            this.button3.UseVisualStyleBackColor = true;
+            this.button_AddStaff.Location = new System.Drawing.Point(150, 115);
+            this.button_AddStaff.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.button_AddStaff.Name = "button_AddStaff";
+            this.button_AddStaff.Size = new System.Drawing.Size(89, 27);
+            this.button_AddStaff.TabIndex = 7;
+            this.button_AddStaff.Text = "Add Staff";
+            this.button_AddStaff.UseVisualStyleBackColor = true;
             // 
-            // button4
+            // button_SearchStaff
             // 
-            this.button4.Location = new System.Drawing.Point(299, 298);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(178, 51);
-            this.button4.TabIndex = 8;
-            this.button4.Text = "Search Staff";
-            this.button4.UseVisualStyleBackColor = true;
+            this.button_SearchStaff.Location = new System.Drawing.Point(150, 155);
+            this.button_SearchStaff.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.button_SearchStaff.Name = "button_SearchStaff";
+            this.button_SearchStaff.Size = new System.Drawing.Size(89, 27);
+            this.button_SearchStaff.TabIndex = 8;
+            this.button_SearchStaff.Text = "Search Staff";
+            this.button_SearchStaff.UseVisualStyleBackColor = true;
             // 
             // Menu
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.button4);
-            this.Controls.Add(this.button3);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.button1);
+            this.ClientSize = new System.Drawing.Size(400, 234);
+            this.Controls.Add(this.button_SearchStaff);
+            this.Controls.Add(this.button_AddStaff);
+            this.Controls.Add(this.button_SearchOrder);
+            this.Controls.Add(this.button_AddOrder);
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "Menu";
             this.Text = "Menu";
             this.ResumeLayout(false);
@@ -88,9 +93,9 @@
 
         #endregion
 
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.Button button_AddOrder;
+        private System.Windows.Forms.Button button_SearchOrder;
+        private System.Windows.Forms.Button button_AddStaff;
+        private System.Windows.Forms.Button button_SearchStaff;
     }
 }
