@@ -10,25 +10,29 @@ using System.Windows.Forms;
 
 namespace RestaurantManagement
 {
-    public partial class Menu : Form
+    public partial class SearchOrder : Form
     {
-        public Menu()
+        public SearchOrder()
         {
             InitializeComponent();
         }
 
-        private void Button1_Click(object sender, EventArgs e)
+        private void SarchOrder_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label_CustomerNIC_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button_View_Click(object sender, EventArgs e)
         {
             AddOrder Form = new AddOrder();
             this.Hide();
-            Form.Show();
-        }
 
-        private void button_SearchOrder_Click(object sender, EventArgs e)
-        {
-            SearchOrder Form = new SearchOrder();
-            this.Hide();
-            Form.Show();
+            Form.ShowDialog();
         }
     }
 }

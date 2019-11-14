@@ -37,7 +37,7 @@
             // button_AddOrder
             // 
             this.button_AddOrder.Location = new System.Drawing.Point(150, 37);
-            this.button_AddOrder.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.button_AddOrder.Margin = new System.Windows.Forms.Padding(2);
             this.button_AddOrder.Name = "button_AddOrder";
             this.button_AddOrder.Size = new System.Drawing.Size(89, 27);
             this.button_AddOrder.TabIndex = 5;
@@ -48,17 +48,18 @@
             // button_SearchOrder
             // 
             this.button_SearchOrder.Location = new System.Drawing.Point(150, 76);
-            this.button_SearchOrder.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.button_SearchOrder.Margin = new System.Windows.Forms.Padding(2);
             this.button_SearchOrder.Name = "button_SearchOrder";
             this.button_SearchOrder.Size = new System.Drawing.Size(89, 27);
             this.button_SearchOrder.TabIndex = 6;
             this.button_SearchOrder.Text = "Search Order";
             this.button_SearchOrder.UseVisualStyleBackColor = true;
+            this.button_SearchOrder.Click += new System.EventHandler(this.button_SearchOrder_Click);
             // 
             // button_AddStaff
             // 
             this.button_AddStaff.Location = new System.Drawing.Point(150, 115);
-            this.button_AddStaff.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.button_AddStaff.Margin = new System.Windows.Forms.Padding(2);
             this.button_AddStaff.Name = "button_AddStaff";
             this.button_AddStaff.Size = new System.Drawing.Size(89, 27);
             this.button_AddStaff.TabIndex = 7;
@@ -68,7 +69,7 @@
             // button_SearchStaff
             // 
             this.button_SearchStaff.Location = new System.Drawing.Point(150, 155);
-            this.button_SearchStaff.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.button_SearchStaff.Margin = new System.Windows.Forms.Padding(2);
             this.button_SearchStaff.Name = "button_SearchStaff";
             this.button_SearchStaff.Size = new System.Drawing.Size(89, 27);
             this.button_SearchStaff.TabIndex = 8;
@@ -84,7 +85,7 @@
             this.Controls.Add(this.button_AddStaff);
             this.Controls.Add(this.button_SearchOrder);
             this.Controls.Add(this.button_AddOrder);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "Menu";
             this.Text = "Menu";
             this.ResumeLayout(false);
