@@ -16,5 +16,20 @@ namespace RestaurantManagement
         {
             InitializeComponent();
         }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label_CustomerID_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label_LastName_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

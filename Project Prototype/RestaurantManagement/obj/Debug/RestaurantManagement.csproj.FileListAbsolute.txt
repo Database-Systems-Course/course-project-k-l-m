@@ -19,3 +19,4 @@ E:\GitHub\course-project-k-l-m\Project Prototype\RestaurantManagement\obj\Debug\
 E:\GitHub\course-project-k-l-m\Project Prototype\RestaurantManagement\obj\Debug\RestaurantManagement.csproj.CoreCompileInputs.cache
 E:\GitHub\course-project-k-l-m\Project Prototype\RestaurantManagement\obj\Debug\RestaurantManagement.exe
 E:\GitHub\course-project-k-l-m\Project Prototype\RestaurantManagement\obj\Debug\RestaurantManagement.pdb
+E:\GitHub\course-project-k-l-m\Project Prototype\RestaurantManagement\obj\Debug\RestaurantManagement.AddOrder.resources
