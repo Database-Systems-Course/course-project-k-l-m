@@ -31,5 +31,27 @@ namespace RestaurantManagement
         {
 
         }
+
+        private void checkbox_Soda_CheckedChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void checkbox_Tea_CheckedChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void checkbox_Coffee_CheckedChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button_AddOrder_Click(object sender, EventArgs e)
+        {
+            Menu Form = new Menu();
+            this.Hide();
+            Form.Show();
+        }
     }
 }
