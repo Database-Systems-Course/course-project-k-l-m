@@ -37,13 +37,13 @@
             this.label_HiringDate = new System.Windows.Forms.Label();
             this.label_DailyWorkHours = new System.Windows.Forms.Label();
             this.button_AddStaff = new System.Windows.Forms.Button();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.textBox5 = new System.Windows.Forms.TextBox();
-            this.textBox6 = new System.Windows.Forms.TextBox();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
+            this.textbox_NIC = new System.Windows.Forms.TextBox();
+            this.textbox_FirstName = new System.Windows.Forms.TextBox();
+            this.textbox_LastName = new System.Windows.Forms.TextBox();
+            this.textbox_BranchID = new System.Windows.Forms.TextBox();
+            this.textbox_JobTitle = new System.Windows.Forms.TextBox();
+            this.textbox_DailyWorkHours = new System.Windows.Forms.TextBox();
+            this.datetimepicker_HiringDate = new System.Windows.Forms.DateTimePicker();
             this.SuspendLayout();
             // 
             // label_AddStaff
@@ -128,67 +128,67 @@
             this.button_AddStaff.Text = "Add Staff";
             this.button_AddStaff.UseVisualStyleBackColor = true;
             // 
-            // textBox1
+            // textbox_NIC
             // 
-            this.textBox1.Location = new System.Drawing.Point(115, 74);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(177, 20);
-            this.textBox1.TabIndex = 9;
+            this.textbox_NIC.Location = new System.Drawing.Point(115, 74);
+            this.textbox_NIC.Name = "textbox_NIC";
+            this.textbox_NIC.Size = new System.Drawing.Size(177, 20);
+            this.textbox_NIC.TabIndex = 9;
             // 
-            // textBox2
+            // textbox_FirstName
             // 
-            this.textBox2.Location = new System.Drawing.Point(115, 110);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(177, 20);
-            this.textBox2.TabIndex = 10;
+            this.textbox_FirstName.Location = new System.Drawing.Point(115, 110);
+            this.textbox_FirstName.Name = "textbox_FirstName";
+            this.textbox_FirstName.Size = new System.Drawing.Size(177, 20);
+            this.textbox_FirstName.TabIndex = 10;
             // 
-            // textBox3
+            // textbox_LastName
             // 
-            this.textBox3.Location = new System.Drawing.Point(115, 141);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(177, 20);
-            this.textBox3.TabIndex = 11;
+            this.textbox_LastName.Location = new System.Drawing.Point(115, 141);
+            this.textbox_LastName.Name = "textbox_LastName";
+            this.textbox_LastName.Size = new System.Drawing.Size(177, 20);
+            this.textbox_LastName.TabIndex = 11;
             // 
-            // textBox4
+            // textbox_BranchID
             // 
-            this.textBox4.Location = new System.Drawing.Point(115, 175);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(177, 20);
-            this.textBox4.TabIndex = 12;
+            this.textbox_BranchID.Location = new System.Drawing.Point(115, 175);
+            this.textbox_BranchID.Name = "textbox_BranchID";
+            this.textbox_BranchID.Size = new System.Drawing.Size(177, 20);
+            this.textbox_BranchID.TabIndex = 12;
             // 
-            // textBox5
+            // textbox_JobTitle
             // 
-            this.textBox5.Location = new System.Drawing.Point(115, 209);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(177, 20);
-            this.textBox5.TabIndex = 13;
+            this.textbox_JobTitle.Location = new System.Drawing.Point(115, 209);
+            this.textbox_JobTitle.Name = "textbox_JobTitle";
+            this.textbox_JobTitle.Size = new System.Drawing.Size(177, 20);
+            this.textbox_JobTitle.TabIndex = 13;
             // 
-            // textBox6
+            // textbox_DailyWorkHours
             // 
-            this.textBox6.Location = new System.Drawing.Point(115, 282);
-            this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(177, 20);
-            this.textBox6.TabIndex = 14;
+            this.textbox_DailyWorkHours.Location = new System.Drawing.Point(115, 282);
+            this.textbox_DailyWorkHours.Name = "textbox_DailyWorkHours";
+            this.textbox_DailyWorkHours.Size = new System.Drawing.Size(177, 20);
+            this.textbox_DailyWorkHours.TabIndex = 14;
             // 
-            // dateTimePicker1
+            // datetimepicker_HiringDate
             // 
-            this.dateTimePicker1.Location = new System.Drawing.Point(115, 245);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(177, 20);
-            this.dateTimePicker1.TabIndex = 15;
+            this.datetimepicker_HiringDate.Location = new System.Drawing.Point(115, 245);
+            this.datetimepicker_HiringDate.Name = "datetimepicker_HiringDate";
+            this.datetimepicker_HiringDate.Size = new System.Drawing.Size(177, 20);
+            this.datetimepicker_HiringDate.TabIndex = 15;
             // 
             // AddStaff
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(357, 388);
-            this.Controls.Add(this.dateTimePicker1);
-            this.Controls.Add(this.textBox6);
-            this.Controls.Add(this.textBox5);
-            this.Controls.Add(this.textBox4);
-            this.Controls.Add(this.textBox3);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.datetimepicker_HiringDate);
+            this.Controls.Add(this.textbox_DailyWorkHours);
+            this.Controls.Add(this.textbox_JobTitle);
+            this.Controls.Add(this.textbox_BranchID);
+            this.Controls.Add(this.textbox_LastName);
+            this.Controls.Add(this.textbox_FirstName);
+            this.Controls.Add(this.textbox_NIC);
             this.Controls.Add(this.button_AddStaff);
             this.Controls.Add(this.label_DailyWorkHours);
             this.Controls.Add(this.label_HiringDate);
@@ -216,12 +216,12 @@
         private System.Windows.Forms.Label label_HiringDate;
         private System.Windows.Forms.Label label_DailyWorkHours;
         private System.Windows.Forms.Button button_AddStaff;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.TextBox textBox4;
-        private System.Windows.Forms.TextBox textBox5;
-        private System.Windows.Forms.TextBox textBox6;
-        private System.Windows.Forms.DateTimePicker dateTimePicker1;
+        private System.Windows.Forms.TextBox textbox_NIC;
+        private System.Windows.Forms.TextBox textbox_FirstName;
+        private System.Windows.Forms.TextBox textbox_LastName;
+        private System.Windows.Forms.TextBox textbox_BranchID;
+        private System.Windows.Forms.TextBox textbox_JobTitle;
+        private System.Windows.Forms.TextBox textbox_DailyWorkHours;
+        private System.Windows.Forms.DateTimePicker datetimepicker_HiringDate;
     }
 }
