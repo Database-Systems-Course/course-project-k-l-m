@@ -13,3 +13,4 @@ E:\GitHub\course-project-k-l-m\Project Prototype\RestaurantManagement\obj\Releas
 E:\GitHub\course-project-k-l-m\Project Prototype\RestaurantManagement\obj\Release\RestaurantManagement.csproj.CoreCompileInputs.cache
 E:\GitHub\course-project-k-l-m\Project Prototype\RestaurantManagement\obj\Release\RestaurantManagement.exe
 E:\GitHub\course-project-k-l-m\Project Prototype\RestaurantManagement\obj\Release\RestaurantManagement.pdb
+E:\GitHub\course-project-k-l-m\Project Prototype\RestaurantManagement\obj\Release\RestaurantManagement.AddOrders.resources
