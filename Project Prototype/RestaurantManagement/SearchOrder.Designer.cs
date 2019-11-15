@@ -41,6 +41,7 @@
             this.SearchResults = new System.Windows.Forms.ListBox();
             this.button_View = new System.Windows.Forms.Button();
             this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
+            this.button_BackToMenu = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // label_SearchOrder
@@ -137,19 +138,30 @@
             // 
             // button_View
             // 
-            this.button_View.Location = new System.Drawing.Point(650, 423);
+            this.button_View.Location = new System.Drawing.Point(621, 423);
             this.button_View.Name = "button_View";
-            this.button_View.Size = new System.Drawing.Size(75, 23);
+            this.button_View.Size = new System.Drawing.Size(104, 23);
             this.button_View.TabIndex = 11;
             this.button_View.Text = "View";
             this.button_View.UseVisualStyleBackColor = true;
             this.button_View.Click += new System.EventHandler(this.button_View_Click);
+            // 
+            // button_BackToMenu
+            // 
+            this.button_BackToMenu.Location = new System.Drawing.Point(463, 423);
+            this.button_BackToMenu.Name = "button_BackToMenu";
+            this.button_BackToMenu.Size = new System.Drawing.Size(132, 23);
+            this.button_BackToMenu.TabIndex = 12;
+            this.button_BackToMenu.Text = "Back To Menu";
+            this.button_BackToMenu.UseVisualStyleBackColor = true;
+            this.button_BackToMenu.Click += new System.EventHandler(this.button_BackToMenu_Click);
             // 
             // SearchOrder
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(774, 458);
+            this.Controls.Add(this.button_BackToMenu);
             this.Controls.Add(this.button_View);
             this.Controls.Add(this.SearchResults);
             this.Controls.Add(this.button_Search);
@@ -185,5 +197,6 @@
         private System.Windows.Forms.ListBox SearchResults;
         private System.Windows.Forms.Button button_View;
         private System.ComponentModel.BackgroundWorker backgroundWorker1;
+        private System.Windows.Forms.Button button_BackToMenu;
     }
 }

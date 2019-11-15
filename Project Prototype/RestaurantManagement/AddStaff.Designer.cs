@@ -44,6 +44,7 @@
             this.textbox_JobTitle = new System.Windows.Forms.TextBox();
             this.textbox_DailyWorkHours = new System.Windows.Forms.TextBox();
             this.datetimepicker_HiringDate = new System.Windows.Forms.DateTimePicker();
+            this.button_BackToMenu = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // label_AddStaff
@@ -121,9 +122,9 @@
             // 
             // button_AddStaff
             // 
-            this.button_AddStaff.Location = new System.Drawing.Point(217, 333);
+            this.button_AddStaff.Location = new System.Drawing.Point(197, 333);
             this.button_AddStaff.Name = "button_AddStaff";
-            this.button_AddStaff.Size = new System.Drawing.Size(75, 23);
+            this.button_AddStaff.Size = new System.Drawing.Size(95, 23);
             this.button_AddStaff.TabIndex = 8;
             this.button_AddStaff.Text = "Add Staff";
             this.button_AddStaff.UseVisualStyleBackColor = true;
@@ -177,11 +178,22 @@
             this.datetimepicker_HiringDate.Size = new System.Drawing.Size(177, 20);
             this.datetimepicker_HiringDate.TabIndex = 15;
             // 
+            // button_BackToMenu
+            // 
+            this.button_BackToMenu.Location = new System.Drawing.Point(67, 333);
+            this.button_BackToMenu.Name = "button_BackToMenu";
+            this.button_BackToMenu.Size = new System.Drawing.Size(100, 23);
+            this.button_BackToMenu.TabIndex = 16;
+            this.button_BackToMenu.Text = "Back to Menu";
+            this.button_BackToMenu.UseVisualStyleBackColor = true;
+            this.button_BackToMenu.Click += new System.EventHandler(this.button_BackToMenu_Click);
+            // 
             // AddStaff
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(357, 388);
+            this.Controls.Add(this.button_BackToMenu);
             this.Controls.Add(this.datetimepicker_HiringDate);
             this.Controls.Add(this.textbox_DailyWorkHours);
             this.Controls.Add(this.textbox_JobTitle);
@@ -223,5 +235,6 @@
         private System.Windows.Forms.TextBox textbox_JobTitle;
         private System.Windows.Forms.TextBox textbox_DailyWorkHours;
         private System.Windows.Forms.DateTimePicker datetimepicker_HiringDate;
+        private System.Windows.Forms.Button button_BackToMenu;
     }
 }

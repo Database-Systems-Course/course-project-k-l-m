@@ -37,39 +37,40 @@
             this.textbox_CustomerNIC = new System.Windows.Forms.TextBox();
             this.label_LastName = new System.Windows.Forms.Label();
             this.groupbox_StaffDetails = new System.Windows.Forms.GroupBox();
-            this.label2 = new System.Windows.Forms.Label();
             this.textbox_StaffID = new System.Windows.Forms.TextBox();
+            this.label2 = new System.Windows.Forms.Label();
             this.groupbox_ItemsOrdered = new System.Windows.Forms.GroupBox();
-            this.button_AddOrder = new System.Windows.Forms.Button();
-            this.checkbox_Soda = new System.Windows.Forms.CheckBox();
-            this.checkbox_MilkTea = new System.Windows.Forms.CheckBox();
-            this.checkbox_Coffee = new System.Windows.Forms.CheckBox();
-            this.checkbox_Custard = new System.Windows.Forms.CheckBox();
-            this.checkbox_Juice = new System.Windows.Forms.CheckBox();
-            this.checkbox_GreenTea = new System.Windows.Forms.CheckBox();
-            this.checkbox_Shake = new System.Windows.Forms.CheckBox();
+            this.checkbox_Daal = new System.Windows.Forms.CheckBox();
+            this.checkbox_SingaporeanRice = new System.Windows.Forms.CheckBox();
+            this.checkbox_PlainRice = new System.Windows.Forms.CheckBox();
+            this.checkbox_Chowmein = new System.Windows.Forms.CheckBox();
+            this.checkbox_Pizza = new System.Windows.Forms.CheckBox();
+            this.checkbox_Pasta = new System.Windows.Forms.CheckBox();
+            this.checkbox_Bread = new System.Windows.Forms.CheckBox();
+            this.checkbox_Shashlik = new System.Windows.Forms.CheckBox();
+            this.checkbox_MixVegetable = new System.Windows.Forms.CheckBox();
+            this.checkbox_ChickenQorma = new System.Windows.Forms.CheckBox();
+            this.checkbox_ChickenKarahi = new System.Windows.Forms.CheckBox();
+            this.checkbox_Nihari = new System.Windows.Forms.CheckBox();
+            this.checkbox_Soup = new System.Windows.Forms.CheckBox();
+            this.checkbox_Salad = new System.Windows.Forms.CheckBox();
+            this.checkbox_Kheer = new System.Windows.Forms.CheckBox();
+            this.checkbox_Halwa = new System.Windows.Forms.CheckBox();
+            this.checkbox_Tart = new System.Windows.Forms.CheckBox();
+            this.checkbox_Cake = new System.Windows.Forms.CheckBox();
+            this.checkbox_IceCream = new System.Windows.Forms.CheckBox();
             this.checkbox_Smoothie = new System.Windows.Forms.CheckBox();
+            this.checkbox_Shake = new System.Windows.Forms.CheckBox();
+            this.checkbox_GreenTea = new System.Windows.Forms.CheckBox();
+            this.checkbox_Juice = new System.Windows.Forms.CheckBox();
+            this.checkbox_Custard = new System.Windows.Forms.CheckBox();
+            this.checkbox_Coffee = new System.Windows.Forms.CheckBox();
+            this.checkbox_MilkTea = new System.Windows.Forms.CheckBox();
+            this.checkbox_Soda = new System.Windows.Forms.CheckBox();
+            this.button_AddOrder = new System.Windows.Forms.Button();
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.label_Date = new System.Windows.Forms.Label();
-            this.checkbox_IceCream = new System.Windows.Forms.CheckBox();
-            this.checkbox_Cake = new System.Windows.Forms.CheckBox();
-            this.checkbox_Tart = new System.Windows.Forms.CheckBox();
-            this.checkbox_Halwa = new System.Windows.Forms.CheckBox();
-            this.checkbox_Kheer = new System.Windows.Forms.CheckBox();
-            this.checkbox_Salad = new System.Windows.Forms.CheckBox();
-            this.checkbox_Soup = new System.Windows.Forms.CheckBox();
-            this.checkbox_Nihari = new System.Windows.Forms.CheckBox();
-            this.checkbox_ChickenKarahi = new System.Windows.Forms.CheckBox();
-            this.checkbox_ChickenQorma = new System.Windows.Forms.CheckBox();
-            this.checkbox_MixVegetable = new System.Windows.Forms.CheckBox();
-            this.checkbox_Shashlik = new System.Windows.Forms.CheckBox();
-            this.checkbox_Bread = new System.Windows.Forms.CheckBox();
-            this.checkbox_Pasta = new System.Windows.Forms.CheckBox();
-            this.checkbox_Pizza = new System.Windows.Forms.CheckBox();
-            this.checkbox_Chowmein = new System.Windows.Forms.CheckBox();
-            this.checkbox_PlainRice = new System.Windows.Forms.CheckBox();
-            this.checkbox_SingaporeanRice = new System.Windows.Forms.CheckBox();
-            this.checkbox_Daal = new System.Windows.Forms.CheckBox();
+            this.button_BackToMenu = new System.Windows.Forms.Button();
             this.groupbox_CustomerDetails.SuspendLayout();
             this.groupbox_StaffDetails.SuspendLayout();
             this.groupbox_ItemsOrdered.SuspendLayout();
@@ -163,6 +164,13 @@
             this.groupbox_StaffDetails.TabStop = false;
             this.groupbox_StaffDetails.Text = "Staff Details";
             // 
+            // textbox_StaffID
+            // 
+            this.textbox_StaffID.Location = new System.Drawing.Point(67, 31);
+            this.textbox_StaffID.Name = "textbox_StaffID";
+            this.textbox_StaffID.Size = new System.Drawing.Size(133, 20);
+            this.textbox_StaffID.TabIndex = 1;
+            // 
             // label2
             // 
             this.label2.AutoSize = true;
@@ -171,13 +179,6 @@
             this.label2.Size = new System.Drawing.Size(55, 13);
             this.label2.TabIndex = 0;
             this.label2.Text = "Staff ID:";
-            // 
-            // textbox_StaffID
-            // 
-            this.textbox_StaffID.Location = new System.Drawing.Point(67, 31);
-            this.textbox_StaffID.Name = "textbox_StaffID";
-            this.textbox_StaffID.Size = new System.Drawing.Size(133, 20);
-            this.textbox_StaffID.TabIndex = 1;
             // 
             // groupbox_ItemsOrdered
             // 
@@ -209,45 +210,252 @@
             this.groupbox_ItemsOrdered.Controls.Add(this.checkbox_MilkTea);
             this.groupbox_ItemsOrdered.Controls.Add(this.checkbox_Soda);
             this.groupbox_ItemsOrdered.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupbox_ItemsOrdered.Location = new System.Drawing.Point(38, 218);
+            this.groupbox_ItemsOrdered.Location = new System.Drawing.Point(38, 205);
             this.groupbox_ItemsOrdered.Name = "groupbox_ItemsOrdered";
-            this.groupbox_ItemsOrdered.Size = new System.Drawing.Size(536, 200);
+            this.groupbox_ItemsOrdered.Size = new System.Drawing.Size(536, 199);
             this.groupbox_ItemsOrdered.TabIndex = 6;
             this.groupbox_ItemsOrdered.TabStop = false;
             this.groupbox_ItemsOrdered.Text = "Items Ordered";
             // 
-            // button_AddOrder
+            // checkbox_Daal
             // 
-            this.button_AddOrder.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button_AddOrder.Location = new System.Drawing.Point(499, 176);
-            this.button_AddOrder.Name = "button_AddOrder";
-            this.button_AddOrder.Size = new System.Drawing.Size(75, 23);
-            this.button_AddOrder.TabIndex = 3;
-            this.button_AddOrder.Text = "Add Order";
-            this.button_AddOrder.UseVisualStyleBackColor = true;
-            this.button_AddOrder.Click += new System.EventHandler(this.button_AddOrder_Click);
+            this.checkbox_Daal.AutoSize = true;
+            this.checkbox_Daal.Location = new System.Drawing.Point(11, 121);
+            this.checkbox_Daal.Name = "checkbox_Daal";
+            this.checkbox_Daal.Size = new System.Drawing.Size(52, 17);
+            this.checkbox_Daal.TabIndex = 26;
+            this.checkbox_Daal.Text = "Daal";
+            this.checkbox_Daal.UseVisualStyleBackColor = true;
             // 
-            // checkbox_Soda
+            // checkbox_SingaporeanRice
             // 
-            this.checkbox_Soda.AutoSize = true;
-            this.checkbox_Soda.Location = new System.Drawing.Point(427, 26);
-            this.checkbox_Soda.Name = "checkbox_Soda";
-            this.checkbox_Soda.Size = new System.Drawing.Size(55, 17);
-            this.checkbox_Soda.TabIndex = 0;
-            this.checkbox_Soda.Text = "Soda";
-            this.checkbox_Soda.UseVisualStyleBackColor = true;
-            this.checkbox_Soda.CheckedChanged += new System.EventHandler(this.checkbox_Soda_CheckedChanged);
+            this.checkbox_SingaporeanRice.AutoSize = true;
+            this.checkbox_SingaporeanRice.Location = new System.Drawing.Point(11, 167);
+            this.checkbox_SingaporeanRice.Name = "checkbox_SingaporeanRice";
+            this.checkbox_SingaporeanRice.Size = new System.Drawing.Size(127, 17);
+            this.checkbox_SingaporeanRice.TabIndex = 25;
+            this.checkbox_SingaporeanRice.Text = "Singaporean Rice";
+            this.checkbox_SingaporeanRice.UseVisualStyleBackColor = true;
             // 
-            // checkbox_MilkTea
+            // checkbox_PlainRice
             // 
-            this.checkbox_MilkTea.AutoSize = true;
-            this.checkbox_MilkTea.Location = new System.Drawing.Point(427, 144);
-            this.checkbox_MilkTea.Name = "checkbox_MilkTea";
-            this.checkbox_MilkTea.Size = new System.Drawing.Size(75, 17);
-            this.checkbox_MilkTea.TabIndex = 1;
-            this.checkbox_MilkTea.Text = "Milk Tea";
-            this.checkbox_MilkTea.UseVisualStyleBackColor = true;
-            this.checkbox_MilkTea.CheckedChanged += new System.EventHandler(this.checkbox_Tea_CheckedChanged);
+            this.checkbox_PlainRice.AutoSize = true;
+            this.checkbox_PlainRice.Location = new System.Drawing.Point(171, 94);
+            this.checkbox_PlainRice.Name = "checkbox_PlainRice";
+            this.checkbox_PlainRice.Size = new System.Drawing.Size(84, 17);
+            this.checkbox_PlainRice.TabIndex = 24;
+            this.checkbox_PlainRice.Text = "Plain Rice";
+            this.checkbox_PlainRice.UseVisualStyleBackColor = true;
+            // 
+            // checkbox_Chowmein
+            // 
+            this.checkbox_Chowmein.AutoSize = true;
+            this.checkbox_Chowmein.Location = new System.Drawing.Point(171, 71);
+            this.checkbox_Chowmein.Name = "checkbox_Chowmein";
+            this.checkbox_Chowmein.Size = new System.Drawing.Size(83, 17);
+            this.checkbox_Chowmein.TabIndex = 23;
+            this.checkbox_Chowmein.Text = "Chowmein";
+            this.checkbox_Chowmein.UseVisualStyleBackColor = true;
+            // 
+            // checkbox_Pizza
+            // 
+            this.checkbox_Pizza.AutoSize = true;
+            this.checkbox_Pizza.Location = new System.Drawing.Point(171, 48);
+            this.checkbox_Pizza.Name = "checkbox_Pizza";
+            this.checkbox_Pizza.Size = new System.Drawing.Size(56, 17);
+            this.checkbox_Pizza.TabIndex = 22;
+            this.checkbox_Pizza.Text = "Pizza";
+            this.checkbox_Pizza.UseVisualStyleBackColor = true;
+            // 
+            // checkbox_Pasta
+            // 
+            this.checkbox_Pasta.AutoSize = true;
+            this.checkbox_Pasta.Location = new System.Drawing.Point(171, 25);
+            this.checkbox_Pasta.Name = "checkbox_Pasta";
+            this.checkbox_Pasta.Size = new System.Drawing.Size(58, 17);
+            this.checkbox_Pasta.TabIndex = 21;
+            this.checkbox_Pasta.Text = "Pasta";
+            this.checkbox_Pasta.UseVisualStyleBackColor = true;
+            // 
+            // checkbox_Bread
+            // 
+            this.checkbox_Bread.AutoSize = true;
+            this.checkbox_Bread.Location = new System.Drawing.Point(171, 120);
+            this.checkbox_Bread.Name = "checkbox_Bread";
+            this.checkbox_Bread.Size = new System.Drawing.Size(59, 17);
+            this.checkbox_Bread.TabIndex = 20;
+            this.checkbox_Bread.Text = "Bread";
+            this.checkbox_Bread.UseVisualStyleBackColor = true;
+            // 
+            // checkbox_Shashlik
+            // 
+            this.checkbox_Shashlik.AutoSize = true;
+            this.checkbox_Shashlik.Location = new System.Drawing.Point(11, 144);
+            this.checkbox_Shashlik.Name = "checkbox_Shashlik";
+            this.checkbox_Shashlik.Size = new System.Drawing.Size(74, 17);
+            this.checkbox_Shashlik.TabIndex = 19;
+            this.checkbox_Shashlik.Text = "Shashlik";
+            this.checkbox_Shashlik.UseVisualStyleBackColor = true;
+            // 
+            // checkbox_MixVegetable
+            // 
+            this.checkbox_MixVegetable.AutoSize = true;
+            this.checkbox_MixVegetable.Location = new System.Drawing.Point(11, 95);
+            this.checkbox_MixVegetable.Name = "checkbox_MixVegetable";
+            this.checkbox_MixVegetable.Size = new System.Drawing.Size(102, 17);
+            this.checkbox_MixVegetable.TabIndex = 18;
+            this.checkbox_MixVegetable.Text = "MixVegetable";
+            this.checkbox_MixVegetable.UseVisualStyleBackColor = true;
+            // 
+            // checkbox_ChickenQorma
+            // 
+            this.checkbox_ChickenQorma.AutoSize = true;
+            this.checkbox_ChickenQorma.Location = new System.Drawing.Point(11, 71);
+            this.checkbox_ChickenQorma.Name = "checkbox_ChickenQorma";
+            this.checkbox_ChickenQorma.Size = new System.Drawing.Size(112, 17);
+            this.checkbox_ChickenQorma.TabIndex = 17;
+            this.checkbox_ChickenQorma.Text = "Chicken Qorma";
+            this.checkbox_ChickenQorma.UseVisualStyleBackColor = true;
+            // 
+            // checkbox_ChickenKarahi
+            // 
+            this.checkbox_ChickenKarahi.AutoSize = true;
+            this.checkbox_ChickenKarahi.Location = new System.Drawing.Point(11, 49);
+            this.checkbox_ChickenKarahi.Name = "checkbox_ChickenKarahi";
+            this.checkbox_ChickenKarahi.Size = new System.Drawing.Size(112, 17);
+            this.checkbox_ChickenKarahi.TabIndex = 16;
+            this.checkbox_ChickenKarahi.Text = "Chicken Karahi";
+            this.checkbox_ChickenKarahi.UseVisualStyleBackColor = true;
+            // 
+            // checkbox_Nihari
+            // 
+            this.checkbox_Nihari.AutoSize = true;
+            this.checkbox_Nihari.Location = new System.Drawing.Point(11, 26);
+            this.checkbox_Nihari.Name = "checkbox_Nihari";
+            this.checkbox_Nihari.Size = new System.Drawing.Size(59, 17);
+            this.checkbox_Nihari.TabIndex = 15;
+            this.checkbox_Nihari.Text = "Nihari";
+            this.checkbox_Nihari.UseVisualStyleBackColor = true;
+            // 
+            // checkbox_Soup
+            // 
+            this.checkbox_Soup.AutoSize = true;
+            this.checkbox_Soup.Location = new System.Drawing.Point(171, 167);
+            this.checkbox_Soup.Name = "checkbox_Soup";
+            this.checkbox_Soup.Size = new System.Drawing.Size(55, 17);
+            this.checkbox_Soup.TabIndex = 14;
+            this.checkbox_Soup.Text = "Soup";
+            this.checkbox_Soup.UseVisualStyleBackColor = true;
+            // 
+            // checkbox_Salad
+            // 
+            this.checkbox_Salad.AutoSize = true;
+            this.checkbox_Salad.Location = new System.Drawing.Point(171, 144);
+            this.checkbox_Salad.Name = "checkbox_Salad";
+            this.checkbox_Salad.Size = new System.Drawing.Size(58, 17);
+            this.checkbox_Salad.TabIndex = 13;
+            this.checkbox_Salad.Text = "Salad";
+            this.checkbox_Salad.UseVisualStyleBackColor = true;
+            // 
+            // checkbox_Kheer
+            // 
+            this.checkbox_Kheer.AutoSize = true;
+            this.checkbox_Kheer.Location = new System.Drawing.Point(313, 144);
+            this.checkbox_Kheer.Name = "checkbox_Kheer";
+            this.checkbox_Kheer.Size = new System.Drawing.Size(59, 17);
+            this.checkbox_Kheer.TabIndex = 12;
+            this.checkbox_Kheer.Text = "Kheer";
+            this.checkbox_Kheer.UseVisualStyleBackColor = true;
+            // 
+            // checkbox_Halwa
+            // 
+            this.checkbox_Halwa.AutoSize = true;
+            this.checkbox_Halwa.Location = new System.Drawing.Point(313, 120);
+            this.checkbox_Halwa.Name = "checkbox_Halwa";
+            this.checkbox_Halwa.Size = new System.Drawing.Size(61, 17);
+            this.checkbox_Halwa.TabIndex = 11;
+            this.checkbox_Halwa.Text = "Halwa";
+            this.checkbox_Halwa.UseVisualStyleBackColor = true;
+            // 
+            // checkbox_Tart
+            // 
+            this.checkbox_Tart.AutoSize = true;
+            this.checkbox_Tart.Location = new System.Drawing.Point(314, 95);
+            this.checkbox_Tart.Name = "checkbox_Tart";
+            this.checkbox_Tart.Size = new System.Drawing.Size(49, 17);
+            this.checkbox_Tart.TabIndex = 10;
+            this.checkbox_Tart.Text = "Tart";
+            this.checkbox_Tart.UseVisualStyleBackColor = true;
+            // 
+            // checkbox_Cake
+            // 
+            this.checkbox_Cake.AutoSize = true;
+            this.checkbox_Cake.Location = new System.Drawing.Point(314, 71);
+            this.checkbox_Cake.Name = "checkbox_Cake";
+            this.checkbox_Cake.Size = new System.Drawing.Size(55, 17);
+            this.checkbox_Cake.TabIndex = 9;
+            this.checkbox_Cake.Text = "Cake";
+            this.checkbox_Cake.UseVisualStyleBackColor = true;
+            // 
+            // checkbox_IceCream
+            // 
+            this.checkbox_IceCream.AutoSize = true;
+            this.checkbox_IceCream.Location = new System.Drawing.Point(314, 48);
+            this.checkbox_IceCream.Name = "checkbox_IceCream";
+            this.checkbox_IceCream.Size = new System.Drawing.Size(83, 17);
+            this.checkbox_IceCream.TabIndex = 8;
+            this.checkbox_IceCream.Text = "Ice Cream";
+            this.checkbox_IceCream.UseVisualStyleBackColor = true;
+            // 
+            // checkbox_Smoothie
+            // 
+            this.checkbox_Smoothie.AutoSize = true;
+            this.checkbox_Smoothie.Location = new System.Drawing.Point(427, 72);
+            this.checkbox_Smoothie.Name = "checkbox_Smoothie";
+            this.checkbox_Smoothie.Size = new System.Drawing.Size(78, 17);
+            this.checkbox_Smoothie.TabIndex = 7;
+            this.checkbox_Smoothie.Text = "Smoothie";
+            this.checkbox_Smoothie.UseVisualStyleBackColor = true;
+            // 
+            // checkbox_Shake
+            // 
+            this.checkbox_Shake.AutoSize = true;
+            this.checkbox_Shake.Location = new System.Drawing.Point(427, 95);
+            this.checkbox_Shake.Name = "checkbox_Shake";
+            this.checkbox_Shake.Size = new System.Drawing.Size(62, 17);
+            this.checkbox_Shake.TabIndex = 6;
+            this.checkbox_Shake.Text = "Shake";
+            this.checkbox_Shake.UseVisualStyleBackColor = true;
+            // 
+            // checkbox_GreenTea
+            // 
+            this.checkbox_GreenTea.AutoSize = true;
+            this.checkbox_GreenTea.Location = new System.Drawing.Point(427, 167);
+            this.checkbox_GreenTea.Name = "checkbox_GreenTea";
+            this.checkbox_GreenTea.Size = new System.Drawing.Size(86, 17);
+            this.checkbox_GreenTea.TabIndex = 5;
+            this.checkbox_GreenTea.Text = "Green Tea";
+            this.checkbox_GreenTea.UseVisualStyleBackColor = true;
+            // 
+            // checkbox_Juice
+            // 
+            this.checkbox_Juice.AutoSize = true;
+            this.checkbox_Juice.Location = new System.Drawing.Point(427, 49);
+            this.checkbox_Juice.Name = "checkbox_Juice";
+            this.checkbox_Juice.Size = new System.Drawing.Size(56, 17);
+            this.checkbox_Juice.TabIndex = 4;
+            this.checkbox_Juice.Text = "Juice";
+            this.checkbox_Juice.UseVisualStyleBackColor = true;
+            // 
+            // checkbox_Custard
+            // 
+            this.checkbox_Custard.AutoSize = true;
+            this.checkbox_Custard.Location = new System.Drawing.Point(314, 26);
+            this.checkbox_Custard.Name = "checkbox_Custard";
+            this.checkbox_Custard.Size = new System.Drawing.Size(69, 17);
+            this.checkbox_Custard.TabIndex = 3;
+            this.checkbox_Custard.Text = "Custard";
+            this.checkbox_Custard.UseVisualStyleBackColor = true;
             // 
             // checkbox_Coffee
             // 
@@ -260,55 +468,38 @@
             this.checkbox_Coffee.UseVisualStyleBackColor = true;
             this.checkbox_Coffee.CheckedChanged += new System.EventHandler(this.checkbox_Coffee_CheckedChanged);
             // 
-            // checkbox_Custard
+            // checkbox_MilkTea
             // 
-            this.checkbox_Custard.AutoSize = true;
-            this.checkbox_Custard.Location = new System.Drawing.Point(314, 26);
-            this.checkbox_Custard.Name = "checkbox_Custard";
-            this.checkbox_Custard.Size = new System.Drawing.Size(69, 17);
-            this.checkbox_Custard.TabIndex = 3;
-            this.checkbox_Custard.Text = "Custard";
-            this.checkbox_Custard.UseVisualStyleBackColor = true;
+            this.checkbox_MilkTea.AutoSize = true;
+            this.checkbox_MilkTea.Location = new System.Drawing.Point(427, 144);
+            this.checkbox_MilkTea.Name = "checkbox_MilkTea";
+            this.checkbox_MilkTea.Size = new System.Drawing.Size(75, 17);
+            this.checkbox_MilkTea.TabIndex = 1;
+            this.checkbox_MilkTea.Text = "Milk Tea";
+            this.checkbox_MilkTea.UseVisualStyleBackColor = true;
+            this.checkbox_MilkTea.CheckedChanged += new System.EventHandler(this.checkbox_Tea_CheckedChanged);
             // 
-            // checkbox_Juice
+            // checkbox_Soda
             // 
-            this.checkbox_Juice.AutoSize = true;
-            this.checkbox_Juice.Location = new System.Drawing.Point(427, 49);
-            this.checkbox_Juice.Name = "checkbox_Juice";
-            this.checkbox_Juice.Size = new System.Drawing.Size(56, 17);
-            this.checkbox_Juice.TabIndex = 4;
-            this.checkbox_Juice.Text = "Juice";
-            this.checkbox_Juice.UseVisualStyleBackColor = true;
+            this.checkbox_Soda.AutoSize = true;
+            this.checkbox_Soda.Location = new System.Drawing.Point(427, 26);
+            this.checkbox_Soda.Name = "checkbox_Soda";
+            this.checkbox_Soda.Size = new System.Drawing.Size(55, 17);
+            this.checkbox_Soda.TabIndex = 0;
+            this.checkbox_Soda.Text = "Soda";
+            this.checkbox_Soda.UseVisualStyleBackColor = true;
+            this.checkbox_Soda.CheckedChanged += new System.EventHandler(this.checkbox_Soda_CheckedChanged);
             // 
-            // checkbox_GreenTea
+            // button_AddOrder
             // 
-            this.checkbox_GreenTea.AutoSize = true;
-            this.checkbox_GreenTea.Location = new System.Drawing.Point(427, 167);
-            this.checkbox_GreenTea.Name = "checkbox_GreenTea";
-            this.checkbox_GreenTea.Size = new System.Drawing.Size(86, 17);
-            this.checkbox_GreenTea.TabIndex = 5;
-            this.checkbox_GreenTea.Text = "Green Tea";
-            this.checkbox_GreenTea.UseVisualStyleBackColor = true;
-            // 
-            // checkbox_Shake
-            // 
-            this.checkbox_Shake.AutoSize = true;
-            this.checkbox_Shake.Location = new System.Drawing.Point(427, 95);
-            this.checkbox_Shake.Name = "checkbox_Shake";
-            this.checkbox_Shake.Size = new System.Drawing.Size(62, 17);
-            this.checkbox_Shake.TabIndex = 6;
-            this.checkbox_Shake.Text = "Shake";
-            this.checkbox_Shake.UseVisualStyleBackColor = true;
-            // 
-            // checkbox_Smoothie
-            // 
-            this.checkbox_Smoothie.AutoSize = true;
-            this.checkbox_Smoothie.Location = new System.Drawing.Point(427, 72);
-            this.checkbox_Smoothie.Name = "checkbox_Smoothie";
-            this.checkbox_Smoothie.Size = new System.Drawing.Size(78, 17);
-            this.checkbox_Smoothie.TabIndex = 7;
-            this.checkbox_Smoothie.Text = "Smoothie";
-            this.checkbox_Smoothie.UseVisualStyleBackColor = true;
+            this.button_AddOrder.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button_AddOrder.Location = new System.Drawing.Point(499, 176);
+            this.button_AddOrder.Name = "button_AddOrder";
+            this.button_AddOrder.Size = new System.Drawing.Size(75, 23);
+            this.button_AddOrder.TabIndex = 3;
+            this.button_AddOrder.Text = "Add Order";
+            this.button_AddOrder.UseVisualStyleBackColor = true;
+            this.button_AddOrder.Click += new System.EventHandler(this.button_AddOrder_Click);
             // 
             // dateTimePicker1
             // 
@@ -327,201 +518,22 @@
             this.label_Date.TabIndex = 7;
             this.label_Date.Text = "Date:";
             // 
-            // checkbox_IceCream
+            // button_BackToMenu
             // 
-            this.checkbox_IceCream.AutoSize = true;
-            this.checkbox_IceCream.Location = new System.Drawing.Point(314, 48);
-            this.checkbox_IceCream.Name = "checkbox_IceCream";
-            this.checkbox_IceCream.Size = new System.Drawing.Size(83, 17);
-            this.checkbox_IceCream.TabIndex = 8;
-            this.checkbox_IceCream.Text = "Ice Cream";
-            this.checkbox_IceCream.UseVisualStyleBackColor = true;
-            // 
-            // checkbox_Cake
-            // 
-            this.checkbox_Cake.AutoSize = true;
-            this.checkbox_Cake.Location = new System.Drawing.Point(314, 71);
-            this.checkbox_Cake.Name = "checkbox_Cake";
-            this.checkbox_Cake.Size = new System.Drawing.Size(55, 17);
-            this.checkbox_Cake.TabIndex = 9;
-            this.checkbox_Cake.Text = "Cake";
-            this.checkbox_Cake.UseVisualStyleBackColor = true;
-            // 
-            // checkbox_Tart
-            // 
-            this.checkbox_Tart.AutoSize = true;
-            this.checkbox_Tart.Location = new System.Drawing.Point(314, 95);
-            this.checkbox_Tart.Name = "checkbox_Tart";
-            this.checkbox_Tart.Size = new System.Drawing.Size(49, 17);
-            this.checkbox_Tart.TabIndex = 10;
-            this.checkbox_Tart.Text = "Tart";
-            this.checkbox_Tart.UseVisualStyleBackColor = true;
-            // 
-            // checkbox_Halwa
-            // 
-            this.checkbox_Halwa.AutoSize = true;
-            this.checkbox_Halwa.Location = new System.Drawing.Point(313, 120);
-            this.checkbox_Halwa.Name = "checkbox_Halwa";
-            this.checkbox_Halwa.Size = new System.Drawing.Size(61, 17);
-            this.checkbox_Halwa.TabIndex = 11;
-            this.checkbox_Halwa.Text = "Halwa";
-            this.checkbox_Halwa.UseVisualStyleBackColor = true;
-            // 
-            // checkbox_Kheer
-            // 
-            this.checkbox_Kheer.AutoSize = true;
-            this.checkbox_Kheer.Location = new System.Drawing.Point(313, 144);
-            this.checkbox_Kheer.Name = "checkbox_Kheer";
-            this.checkbox_Kheer.Size = new System.Drawing.Size(59, 17);
-            this.checkbox_Kheer.TabIndex = 12;
-            this.checkbox_Kheer.Text = "Kheer";
-            this.checkbox_Kheer.UseVisualStyleBackColor = true;
-            // 
-            // checkbox_Salad
-            // 
-            this.checkbox_Salad.AutoSize = true;
-            this.checkbox_Salad.Location = new System.Drawing.Point(171, 144);
-            this.checkbox_Salad.Name = "checkbox_Salad";
-            this.checkbox_Salad.Size = new System.Drawing.Size(58, 17);
-            this.checkbox_Salad.TabIndex = 13;
-            this.checkbox_Salad.Text = "Salad";
-            this.checkbox_Salad.UseVisualStyleBackColor = true;
-            // 
-            // checkbox_Soup
-            // 
-            this.checkbox_Soup.AutoSize = true;
-            this.checkbox_Soup.Location = new System.Drawing.Point(171, 167);
-            this.checkbox_Soup.Name = "checkbox_Soup";
-            this.checkbox_Soup.Size = new System.Drawing.Size(55, 17);
-            this.checkbox_Soup.TabIndex = 14;
-            this.checkbox_Soup.Text = "Soup";
-            this.checkbox_Soup.UseVisualStyleBackColor = true;
-            // 
-            // checkbox_Nihari
-            // 
-            this.checkbox_Nihari.AutoSize = true;
-            this.checkbox_Nihari.Location = new System.Drawing.Point(11, 26);
-            this.checkbox_Nihari.Name = "checkbox_Nihari";
-            this.checkbox_Nihari.Size = new System.Drawing.Size(59, 17);
-            this.checkbox_Nihari.TabIndex = 15;
-            this.checkbox_Nihari.Text = "Nihari";
-            this.checkbox_Nihari.UseVisualStyleBackColor = true;
-            // 
-            // checkbox_ChickenKarahi
-            // 
-            this.checkbox_ChickenKarahi.AutoSize = true;
-            this.checkbox_ChickenKarahi.Location = new System.Drawing.Point(11, 49);
-            this.checkbox_ChickenKarahi.Name = "checkbox_ChickenKarahi";
-            this.checkbox_ChickenKarahi.Size = new System.Drawing.Size(112, 17);
-            this.checkbox_ChickenKarahi.TabIndex = 16;
-            this.checkbox_ChickenKarahi.Text = "Chicken Karahi";
-            this.checkbox_ChickenKarahi.UseVisualStyleBackColor = true;
-            // 
-            // checkbox_ChickenQorma
-            // 
-            this.checkbox_ChickenQorma.AutoSize = true;
-            this.checkbox_ChickenQorma.Location = new System.Drawing.Point(11, 71);
-            this.checkbox_ChickenQorma.Name = "checkbox_ChickenQorma";
-            this.checkbox_ChickenQorma.Size = new System.Drawing.Size(112, 17);
-            this.checkbox_ChickenQorma.TabIndex = 17;
-            this.checkbox_ChickenQorma.Text = "Chicken Qorma";
-            this.checkbox_ChickenQorma.UseVisualStyleBackColor = true;
-            // 
-            // checkbox_MixVegetable
-            // 
-            this.checkbox_MixVegetable.AutoSize = true;
-            this.checkbox_MixVegetable.Location = new System.Drawing.Point(11, 95);
-            this.checkbox_MixVegetable.Name = "checkbox_MixVegetable";
-            this.checkbox_MixVegetable.Size = new System.Drawing.Size(102, 17);
-            this.checkbox_MixVegetable.TabIndex = 18;
-            this.checkbox_MixVegetable.Text = "MixVegetable";
-            this.checkbox_MixVegetable.UseVisualStyleBackColor = true;
-            // 
-            // checkbox_Shashlik
-            // 
-            this.checkbox_Shashlik.AutoSize = true;
-            this.checkbox_Shashlik.Location = new System.Drawing.Point(11, 144);
-            this.checkbox_Shashlik.Name = "checkbox_Shashlik";
-            this.checkbox_Shashlik.Size = new System.Drawing.Size(74, 17);
-            this.checkbox_Shashlik.TabIndex = 19;
-            this.checkbox_Shashlik.Text = "Shashlik";
-            this.checkbox_Shashlik.UseVisualStyleBackColor = true;
-            // 
-            // checkbox_Bread
-            // 
-            this.checkbox_Bread.AutoSize = true;
-            this.checkbox_Bread.Location = new System.Drawing.Point(171, 120);
-            this.checkbox_Bread.Name = "checkbox_Bread";
-            this.checkbox_Bread.Size = new System.Drawing.Size(59, 17);
-            this.checkbox_Bread.TabIndex = 20;
-            this.checkbox_Bread.Text = "Bread";
-            this.checkbox_Bread.UseVisualStyleBackColor = true;
-            // 
-            // checkbox_Pasta
-            // 
-            this.checkbox_Pasta.AutoSize = true;
-            this.checkbox_Pasta.Location = new System.Drawing.Point(171, 25);
-            this.checkbox_Pasta.Name = "checkbox_Pasta";
-            this.checkbox_Pasta.Size = new System.Drawing.Size(58, 17);
-            this.checkbox_Pasta.TabIndex = 21;
-            this.checkbox_Pasta.Text = "Pasta";
-            this.checkbox_Pasta.UseVisualStyleBackColor = true;
-            // 
-            // checkbox_Pizza
-            // 
-            this.checkbox_Pizza.AutoSize = true;
-            this.checkbox_Pizza.Location = new System.Drawing.Point(171, 48);
-            this.checkbox_Pizza.Name = "checkbox_Pizza";
-            this.checkbox_Pizza.Size = new System.Drawing.Size(56, 17);
-            this.checkbox_Pizza.TabIndex = 22;
-            this.checkbox_Pizza.Text = "Pizza";
-            this.checkbox_Pizza.UseVisualStyleBackColor = true;
-            // 
-            // checkbox_Chowmein
-            // 
-            this.checkbox_Chowmein.AutoSize = true;
-            this.checkbox_Chowmein.Location = new System.Drawing.Point(171, 71);
-            this.checkbox_Chowmein.Name = "checkbox_Chowmein";
-            this.checkbox_Chowmein.Size = new System.Drawing.Size(83, 17);
-            this.checkbox_Chowmein.TabIndex = 23;
-            this.checkbox_Chowmein.Text = "Chowmein";
-            this.checkbox_Chowmein.UseVisualStyleBackColor = true;
-            // 
-            // checkbox_PlainRice
-            // 
-            this.checkbox_PlainRice.AutoSize = true;
-            this.checkbox_PlainRice.Location = new System.Drawing.Point(171, 94);
-            this.checkbox_PlainRice.Name = "checkbox_PlainRice";
-            this.checkbox_PlainRice.Size = new System.Drawing.Size(84, 17);
-            this.checkbox_PlainRice.TabIndex = 24;
-            this.checkbox_PlainRice.Text = "Plain Rice";
-            this.checkbox_PlainRice.UseVisualStyleBackColor = true;
-            // 
-            // checkbox_SingaporeanRice
-            // 
-            this.checkbox_SingaporeanRice.AutoSize = true;
-            this.checkbox_SingaporeanRice.Location = new System.Drawing.Point(11, 167);
-            this.checkbox_SingaporeanRice.Name = "checkbox_SingaporeanRice";
-            this.checkbox_SingaporeanRice.Size = new System.Drawing.Size(127, 17);
-            this.checkbox_SingaporeanRice.TabIndex = 25;
-            this.checkbox_SingaporeanRice.Text = "Singaporean Rice";
-            this.checkbox_SingaporeanRice.UseVisualStyleBackColor = true;
-            // 
-            // checkbox_Daal
-            // 
-            this.checkbox_Daal.AutoSize = true;
-            this.checkbox_Daal.Location = new System.Drawing.Point(11, 121);
-            this.checkbox_Daal.Name = "checkbox_Daal";
-            this.checkbox_Daal.Size = new System.Drawing.Size(52, 17);
-            this.checkbox_Daal.TabIndex = 26;
-            this.checkbox_Daal.Text = "Daal";
-            this.checkbox_Daal.UseVisualStyleBackColor = true;
+            this.button_BackToMenu.Location = new System.Drawing.Point(465, 415);
+            this.button_BackToMenu.Name = "button_BackToMenu";
+            this.button_BackToMenu.Size = new System.Drawing.Size(109, 23);
+            this.button_BackToMenu.TabIndex = 8;
+            this.button_BackToMenu.Text = "Back to Menu";
+            this.button_BackToMenu.UseVisualStyleBackColor = true;
+            this.button_BackToMenu.Click += new System.EventHandler(this.button_BackToMenu_Click);
             // 
             // AddOrder
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(615, 450);
+            this.Controls.Add(this.button_BackToMenu);
             this.Controls.Add(this.dateTimePicker1);
             this.Controls.Add(this.button_AddOrder);
             this.Controls.Add(this.label_Date);
@@ -585,5 +597,6 @@
         private System.Windows.Forms.CheckBox checkbox_Bread;
         private System.Windows.Forms.CheckBox checkbox_SingaporeanRice;
         private System.Windows.Forms.CheckBox checkbox_Daal;
+        private System.Windows.Forms.Button button_BackToMenu;
     }
 }

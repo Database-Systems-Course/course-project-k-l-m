@@ -47,6 +47,7 @@
             this.SearchResults = new System.Windows.Forms.ListBox();
             this.label1 = new System.Windows.Forms.Label();
             this.button_View = new System.Windows.Forms.Button();
+            this.button_BackToMenu = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // datetimepicker_HiringDate
@@ -209,11 +210,22 @@
             this.button_View.Text = "View";
             this.button_View.UseVisualStyleBackColor = true;
             // 
+            // button_BackToMenu
+            // 
+            this.button_BackToMenu.Location = new System.Drawing.Point(512, 415);
+            this.button_BackToMenu.Name = "button_BackToMenu";
+            this.button_BackToMenu.Size = new System.Drawing.Size(129, 23);
+            this.button_BackToMenu.TabIndex = 35;
+            this.button_BackToMenu.Text = "Back to Menu";
+            this.button_BackToMenu.UseVisualStyleBackColor = true;
+            this.button_BackToMenu.Click += new System.EventHandler(this.button_BackToMenu_Click);
+            // 
             // SearchStaff
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(681, 450);
+            this.Controls.Add(this.button_BackToMenu);
             this.Controls.Add(this.button_View);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.SearchResults);
@@ -261,5 +273,6 @@
         private System.Windows.Forms.ListBox SearchResults;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button button_View;
+        private System.Windows.Forms.Button button_BackToMenu;
     }
 }

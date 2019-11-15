@@ -36,3 +36,5 @@ C:\Users\lk04067\course-project-k-l-m\Project Prototype\RestaurantManagement\bin
 C:\Users\lk04067\course-project-k-l-m\Project Prototype\RestaurantManagement\bin\Debug\RestaurantManagement.pdb
 C:\Users\lk04067\course-project-k-l-m\Project Prototype\RestaurantManagement\obj\Debug\RestaurantManagement.AddStaff.resources
 C:\Users\lk04067\course-project-k-l-m\Project Prototype\RestaurantManagement\obj\Debug\RestaurantManagement.SearchStaff.resources
+E:\GitHub\course-project-k-l-m\Project Prototype\RestaurantManagement\obj\Debug\RestaurantManagement.AddStaff.resources
+E:\GitHub\course-project-k-l-m\Project Prototype\RestaurantManagement\obj\Debug\RestaurantManagement.SearchStaff.resources

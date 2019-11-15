@@ -53,5 +53,12 @@ namespace RestaurantManagement
             this.Hide();
             Form.Show();
         }
+
+        private void button_BackToMenu_Click(object sender, EventArgs e)
+        {
+            Menu Form = new Menu();
+            this.Hide();
+            Form.Show();
+        }
     }
 }
