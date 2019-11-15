@@ -16,5 +16,10 @@ namespace RestaurantManagement
         {
             InitializeComponent();
         }
+
+        private void label_AddStaff_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

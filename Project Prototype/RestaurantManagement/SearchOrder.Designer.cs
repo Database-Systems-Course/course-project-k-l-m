@@ -40,6 +40,7 @@
             this.button_Search = new System.Windows.Forms.Button();
             this.SearchResults = new System.Windows.Forms.ListBox();
             this.button_View = new System.Windows.Forms.Button();
+            this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
             this.SuspendLayout();
             // 
             // label_SearchOrder
@@ -183,5 +184,6 @@
         private System.Windows.Forms.Button button_Search;
         private System.Windows.Forms.ListBox SearchResults;
         private System.Windows.Forms.Button button_View;
+        private System.ComponentModel.BackgroundWorker backgroundWorker1;
     }
 }

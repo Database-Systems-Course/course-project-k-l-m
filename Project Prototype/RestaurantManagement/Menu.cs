@@ -43,6 +43,7 @@ namespace RestaurantManagement
         {
             SearchStaff Form = new SearchStaff();
             this.Hide();
+   
             Form.Show();
 
         }

@@ -50,11 +50,11 @@
             // 
             this.label_AddStaff.AutoSize = true;
             this.label_AddStaff.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label_AddStaff.Location = new System.Drawing.Point(155, 30);
+            this.label_AddStaff.Location = new System.Drawing.Point(133, 25);
             this.label_AddStaff.Name = "label_AddStaff";
-            this.label_AddStaff.Size = new System.Drawing.Size(86, 20);
+            this.label_AddStaff.Size = new System.Drawing.Size(111, 20);
             this.label_AddStaff.TabIndex = 0;
-            this.label_AddStaff.Text = "Add Staff";
+            this.label_AddStaff.Text = "Search Staff";
             // 
             // label_NIC
             // 
