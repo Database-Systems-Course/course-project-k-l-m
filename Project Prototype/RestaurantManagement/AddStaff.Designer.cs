@@ -40,11 +40,11 @@
             this.textbox_NIC = new System.Windows.Forms.TextBox();
             this.textbox_FirstName = new System.Windows.Forms.TextBox();
             this.textbox_LastName = new System.Windows.Forms.TextBox();
-            this.textbox_BranchID = new System.Windows.Forms.TextBox();
             this.textbox_DailyWorkHours = new System.Windows.Forms.TextBox();
             this.datetimepicker_HiringDate = new System.Windows.Forms.DateTimePicker();
             this.button_BackToMenu = new System.Windows.Forms.Button();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.comboBox2 = new System.Windows.Forms.ComboBox();
             this.SuspendLayout();
             // 
             // label_AddStaff
@@ -164,14 +164,6 @@
             this.textbox_LastName.Size = new System.Drawing.Size(350, 31);
             this.textbox_LastName.TabIndex = 11;
             // 
-            // textbox_BranchID
-            // 
-            this.textbox_BranchID.Location = new System.Drawing.Point(230, 337);
-            this.textbox_BranchID.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
-            this.textbox_BranchID.Name = "textbox_BranchID";
-            this.textbox_BranchID.Size = new System.Drawing.Size(350, 31);
-            this.textbox_BranchID.TabIndex = 12;
-            // 
             // textbox_DailyWorkHours
             // 
             this.textbox_DailyWorkHours.Location = new System.Drawing.Point(230, 542);
@@ -208,16 +200,24 @@
             this.comboBox1.TabIndex = 17;
             this.comboBox1.SelectedIndexChanged += new System.EventHandler(this.ComboBox1_SelectedIndexChanged);
             // 
+            // comboBox2
+            // 
+            this.comboBox2.FormattingEnabled = true;
+            this.comboBox2.Location = new System.Drawing.Point(230, 334);
+            this.comboBox2.Name = "comboBox2";
+            this.comboBox2.Size = new System.Drawing.Size(350, 33);
+            this.comboBox2.TabIndex = 18;
+            // 
             // AddStaff
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(714, 746);
+            this.Controls.Add(this.comboBox2);
             this.Controls.Add(this.comboBox1);
             this.Controls.Add(this.button_BackToMenu);
             this.Controls.Add(this.datetimepicker_HiringDate);
             this.Controls.Add(this.textbox_DailyWorkHours);
-            this.Controls.Add(this.textbox_BranchID);
             this.Controls.Add(this.textbox_LastName);
             this.Controls.Add(this.textbox_FirstName);
             this.Controls.Add(this.textbox_NIC);
@@ -253,10 +253,10 @@
         private System.Windows.Forms.TextBox textbox_NIC;
         private System.Windows.Forms.TextBox textbox_FirstName;
         private System.Windows.Forms.TextBox textbox_LastName;
-        private System.Windows.Forms.TextBox textbox_BranchID;
         private System.Windows.Forms.TextBox textbox_DailyWorkHours;
         private System.Windows.Forms.DateTimePicker datetimepicker_HiringDate;
         private System.Windows.Forms.Button button_BackToMenu;
         private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.ComboBox comboBox2;
     }
 }

@@ -29,6 +29,15 @@ namespace RestaurantManagement//
             {
                 comboBox1.Items.Add(reader.GetValue(0).ToString());
             }
+            reader.Close();
+            sql = "select idBranch from Branch";
+            command.CommandText = sql;
+            reader = command.ExecuteReader();
+            while (reader.Read())
+            {
+                comboBox2.Items.Add(reader.GetValue(0).ToString());
+            }
+
         }
 
         private void button_BackToMenu_Click(object sender, EventArgs e)
