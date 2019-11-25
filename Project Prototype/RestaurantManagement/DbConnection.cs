@@ -9,11 +9,11 @@ using System.Text;
 using System.Windows.Forms;
 using System.Threading.Tasks;
 
-namespace TheBridgeSchool
+namespace RestaurantManagement
 {
     class DbConnection
     {
-        private static string myConnectionString = "Server=DESKTOP-VEVG9RB;Initial Catalog=Khidmat;Integrated Security=true";
+        private static string myConnectionString = "Server=DESKTOP-VEVG9RB;Initial Catalog=RestaurantManagement;Integrated Security=true";
         public SqlConnection conn = new SqlConnection(myConnectionString);
         public SqlCommand cmd = new SqlCommand();
 
