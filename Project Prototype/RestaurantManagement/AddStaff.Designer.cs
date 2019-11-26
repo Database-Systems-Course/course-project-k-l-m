@@ -131,7 +131,7 @@
             // button_AddStaff
             // 
             this.button_AddStaff.Location = new System.Drawing.Point(394, 640);
-            this.button_AddStaff.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.button_AddStaff.Margin = new System.Windows.Forms.Padding(6);
             this.button_AddStaff.Name = "button_AddStaff";
             this.button_AddStaff.Size = new System.Drawing.Size(190, 44);
             this.button_AddStaff.TabIndex = 8;
@@ -142,7 +142,7 @@
             // textbox_NIC
             // 
             this.textbox_NIC.Location = new System.Drawing.Point(230, 142);
-            this.textbox_NIC.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.textbox_NIC.Margin = new System.Windows.Forms.Padding(6);
             this.textbox_NIC.Name = "textbox_NIC";
             this.textbox_NIC.Size = new System.Drawing.Size(350, 31);
             this.textbox_NIC.TabIndex = 9;
@@ -151,15 +151,16 @@
             // textbox_FirstName
             // 
             this.textbox_FirstName.Location = new System.Drawing.Point(230, 212);
-            this.textbox_FirstName.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.textbox_FirstName.Margin = new System.Windows.Forms.Padding(6);
             this.textbox_FirstName.Name = "textbox_FirstName";
             this.textbox_FirstName.Size = new System.Drawing.Size(350, 31);
             this.textbox_FirstName.TabIndex = 10;
+            this.textbox_FirstName.TextChanged += new System.EventHandler(this.Textbox_FirstName_TextChanged);
             // 
             // textbox_LastName
             // 
             this.textbox_LastName.Location = new System.Drawing.Point(230, 271);
-            this.textbox_LastName.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.textbox_LastName.Margin = new System.Windows.Forms.Padding(6);
             this.textbox_LastName.Name = "textbox_LastName";
             this.textbox_LastName.Size = new System.Drawing.Size(350, 31);
             this.textbox_LastName.TabIndex = 11;
@@ -167,7 +168,7 @@
             // textbox_DailyWorkHours
             // 
             this.textbox_DailyWorkHours.Location = new System.Drawing.Point(230, 542);
-            this.textbox_DailyWorkHours.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.textbox_DailyWorkHours.Margin = new System.Windows.Forms.Padding(6);
             this.textbox_DailyWorkHours.Name = "textbox_DailyWorkHours";
             this.textbox_DailyWorkHours.Size = new System.Drawing.Size(350, 31);
             this.textbox_DailyWorkHours.TabIndex = 14;
@@ -175,7 +176,7 @@
             // datetimepicker_HiringDate
             // 
             this.datetimepicker_HiringDate.Location = new System.Drawing.Point(230, 471);
-            this.datetimepicker_HiringDate.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.datetimepicker_HiringDate.Margin = new System.Windows.Forms.Padding(6);
             this.datetimepicker_HiringDate.Name = "datetimepicker_HiringDate";
             this.datetimepicker_HiringDate.Size = new System.Drawing.Size(350, 31);
             this.datetimepicker_HiringDate.TabIndex = 15;
@@ -183,7 +184,7 @@
             // button_BackToMenu
             // 
             this.button_BackToMenu.Location = new System.Drawing.Point(134, 640);
-            this.button_BackToMenu.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.button_BackToMenu.Margin = new System.Windows.Forms.Padding(6);
             this.button_BackToMenu.Name = "button_BackToMenu";
             this.button_BackToMenu.Size = new System.Drawing.Size(200, 44);
             this.button_BackToMenu.TabIndex = 16;
@@ -230,7 +231,7 @@
             this.Controls.Add(this.label_FirstName);
             this.Controls.Add(this.label_NIC);
             this.Controls.Add(this.label_AddStaff);
-            this.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.Margin = new System.Windows.Forms.Padding(6);
             this.Name = "AddStaff";
             this.Text = "AddStaff";
             this.Load += new System.EventHandler(this.AddStaff_Load);

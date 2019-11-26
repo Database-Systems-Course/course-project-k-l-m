@@ -19,7 +19,7 @@ namespace RestaurantManagement
 
         private void Button1_Click(object sender, EventArgs e)
         {
-            AddOrder Form = new AddOrder();
+            AddOrders Form = new AddOrders();
             this.Hide();
             Form.Show();
         }
