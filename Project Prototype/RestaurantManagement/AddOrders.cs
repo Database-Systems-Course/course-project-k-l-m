@@ -41,6 +41,28 @@ namespace RestaurantManagement
 
         private void button_AddOrder_Click(object sender, EventArgs e)
         {
+            if(textbox_CustomerNIC.Text=="")
+            {
+                MessageBox.Show("Please enter a CNIC");
+            }
+            if (textbox_FirstName.Text == "")
+            {
+                MessageBox.Show("Please enter FirstName ");
+            }
+            if (textbox_LastName.Text == "")
+            {
+                MessageBox.Show("Please enter LastName ");
+            }
+            DbConnection db = new DbConnection();//
+            string conString = db.GetConnectionString();//
+            SqlConnection sq = new SqlConnection(conString);//
+            SqlCommand command = new SqlCommand();//
+            command.Connection = sq;
+            string sql = "select C from FoodItems";
+            command.CommandText = sql;
+            command.Parameters.AddWithValue("@CNIC", textbox_CustomerNIC);
+            sq.Open();
+            
 
         }
 
@@ -73,6 +95,11 @@ namespace RestaurantManagement
                 OrderedItems.Items.Add(combobox_FoodItems.SelectedItem.ToString());
                 Quantity.Items.Add(QtyTextBox.Text);
             }
+        }
+
+        private void Textbox_FirstName_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
     
