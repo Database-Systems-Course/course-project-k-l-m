@@ -16,7 +16,6 @@ E:\GitHub\course-project-k-l-m\Project Prototype\RestaurantManagement\obj\Debug\
 E:\GitHub\course-project-k-l-m\Project Prototype\RestaurantManagement\obj\Debug\RestaurantManagement.Login.resources
 E:\GitHub\course-project-k-l-m\Project Prototype\RestaurantManagement\obj\Debug\RestaurantManagement.Properties.Resources.resources
 E:\GitHub\course-project-k-l-m\Project Prototype\RestaurantManagement\obj\Debug\RestaurantManagement.csproj.GenerateResource.cache
-E:\GitHub\course-project-k-l-m\Project Prototype\RestaurantManagement\obj\Debug\RestaurantManagement.csproj.CoreCompileInputs.cache
 E:\GitHub\course-project-k-l-m\Project Prototype\RestaurantManagement\obj\Debug\RestaurantManagement.exe
 E:\GitHub\course-project-k-l-m\Project Prototype\RestaurantManagement\obj\Debug\RestaurantManagement.pdb
 E:\GitHub\course-project-k-l-m\Project Prototype\RestaurantManagement\obj\Debug\RestaurantManagement.AddOrder.resources

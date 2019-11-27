@@ -13,7 +13,7 @@ namespace RestaurantManagement
 {
     class DbConnection
     {
-        private static string myConnectionString = "Server=DESKTOP-VEVG9RB;Initial Catalog=RestaurantManagement;Integrated Security=true";
+        private static string myConnectionString = "Data Source=LFK-HP@\\SQLEXPRESS;Initial Catalog = restaurant; Integrated Security = True";
         public SqlConnection conn = new SqlConnection(myConnectionString);
         public SqlCommand cmd = new SqlCommand();
 

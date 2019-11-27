@@ -56,7 +56,7 @@ CREATE INDEX StaffJob ON Staff (Jobs_idJob);
 
 
 CREATE INDEX IFK_has ON Staff (Branch_idBranch);
-CREATE INDEX IFK_are done by ON Staff (Jobs_idJob);
+CREATE INDEX IFK_aredoneby ON Staff (Jobs_idJob);
 
 
 CREATE TABLE Orders (
@@ -95,7 +95,7 @@ CREATE INDEX Orders_has_FoodItems_FKIndex2 ON OrderItems (FoodItems_idFood);
 
 
 CREATE INDEX IFK_contain ON OrderItems (Orders_idOrder);
-CREATE INDEX IFK_are used as ON OrderItems (FoodItems_idFood);
+CREATE INDEX IFK_used ON OrderItems (FoodItems_idFood);
 
 
 
