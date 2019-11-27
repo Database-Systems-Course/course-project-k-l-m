@@ -41,28 +41,146 @@ namespace RestaurantManagement
 
         private void button_AddOrder_Click(object sender, EventArgs e)
         {
-            if(textbox_CustomerNIC.Text=="")
-            {
-                MessageBox.Show("Please enter a CNIC");
-            }
-            if (textbox_FirstName.Text == "")
-            {
-                MessageBox.Show("Please enter FirstName ");
-            }
-            if (textbox_LastName.Text == "")
-            {
-                MessageBox.Show("Please enter LastName ");
-            }
+            bool flag = false;
+            int quantity;
+            string food;
             DbConnection db = new DbConnection();//
             string conString = db.GetConnectionString();//
             SqlConnection sq = new SqlConnection(conString);//
             SqlCommand command = new SqlCommand();//
             command.Connection = sq;
-            string sql = "select C from FoodItems";
+            string sql = "select NIC from Customers";
             command.CommandText = sql;
-            command.Parameters.AddWithValue("@CNIC", textbox_CustomerNIC);
+            command.Parameters.AddWithValue("@NIC", textbox_CustomerNIC.Text);
             sq.Open();
-            
+            SqlDataReader reader = command.ExecuteReader();
+
+            while (reader.Read())
+            {
+                if (reader.GetValue(0).ToString() == textbox_CustomerNIC.Text)
+                {
+                    MessageBox.Show("Customer already in Database, No new customer added.");
+                    return;
+
+                }
+            }
+            reader.Close();
+            if (textbox_CustomerNIC.Text == "")
+            {
+                MessageBox.Show("Please enter a CNIC");
+                return;
+            }
+            if (textbox_FirstName.Text == "")
+            {
+                MessageBox.Show("Please enter FirstName ");
+                return;
+            }
+            if (textbox_LastName.Text == "")
+            {
+                MessageBox.Show("Please enter LastName ");
+                return;
+            }
+            MessageBox.Show("New customer added in database");
+
+            command = new SqlCommand();//
+
+            command.Connection = sq;
+            sql = "select top 1 CustomerID from Customers order by CustomerID desc";
+            command.CommandText = sql;
+            reader = command.ExecuteReader();
+            reader.Read();
+            string id = (int.Parse(reader.GetValue(0).ToString()) + 1).ToString();
+            reader.Close();
+            command = new SqlCommand();//
+            command.Connection = sq;
+
+
+            sql = "insert into Customers values (@id, @NIC , @FirtsName,@LastName)";
+            command.CommandText = sql;
+
+            command.CommandText = sql;
+            command.Parameters.AddWithValue("@id", id);
+            command.Parameters.AddWithValue("@NIC", textbox_CustomerNIC.Text);
+
+            command.Parameters.AddWithValue("@FirtsName", textbox_FirstName.Text);
+            command.Parameters.AddWithValue("@LastName", textbox_LastName.Text);
+            command.ExecuteNonQuery();
+
+            command = new SqlCommand();//
+
+            command.Connection = sq;
+            sql = "select top 1 idOrder from Orders order by idOrder desc";
+            command.CommandText = sql;
+            reader = command.ExecuteReader();
+            reader.Read();
+            id = (int.Parse(reader.GetValue(0).ToString()) + 1).ToString();
+            reader.Close();
+ 
+
+
+
+            command = new SqlCommand();//
+            command.Connection = sq;
+
+            sql = "select CustomerID from Customers where NIC = @NIC";
+            command.CommandText = sql;
+            command.Parameters.AddWithValue("@NIC", textbox_CustomerNIC.Text);
+
+            reader = command.ExecuteReader();
+            reader.Read();
+            string CustID = int.Parse(reader.GetValue(0).ToString()).ToString();
+            reader.Close();
+
+
+            command = new SqlCommand();//
+            command.Connection = sq;
+
+            sql = "insert into Orders values (@id, @custId, @staffid ,@date)";
+            command.CommandText = sql;
+
+            command.Parameters.AddWithValue("@id", id);
+            command.Parameters.AddWithValue("@custId", CustID);
+
+            command.Parameters.AddWithValue("@staffid", (comboBox1.Text));
+            command.Parameters.Add("@date", SqlDbType.Date).Value = dateTimePicker1.Value.Date;
+
+
+            MessageBox.Show(command.ExecuteNonQuery().ToString());
+
+            for (int i = 0; i < OrderedItems.Items.Count - 1; i++)
+            {
+                food = OrderedItems.Items[i].ToString();
+                quantity = int.Parse(Quantity.Items[i].ToString());
+
+                command = new SqlCommand();//
+                command.Connection = sq;
+                sql = "select idFood from FoodItems where Name = @food";
+                command.CommandText = sql;
+                command.Parameters.AddWithValue("@food", food);
+                reader = command.ExecuteReader();
+                reader.Read();
+                string foodid = int.Parse(reader.GetValue(0).ToString()).ToString();
+                reader.Close();
+
+                command = new SqlCommand();//
+                command.Connection = sq;
+                sql = "insert into OrderItems values (@id, @foodid , @Quantity)";
+                command.CommandText = sql;
+                command.Parameters.AddWithValue("@id", int.Parse(comboBox1.Text));
+                command.Parameters.AddWithValue("@foodid", foodid);
+                command.Parameters.AddWithValue("@Quantity", quantity);
+                command.ExecuteNonQuery();
+
+            }
+
+
+
+
+
+
+
+
+
 
         }
 
@@ -90,7 +208,7 @@ namespace RestaurantManagement
 
         private void Button_AddItem_Click(object sender, EventArgs e)
         {
-            if (combobox_FoodItems.SelectedItem.ToString() != "" )
+            if (combobox_FoodItems.SelectedItem != null )
             {
                 OrderedItems.Items.Add(combobox_FoodItems.SelectedItem.ToString());
                 Quantity.Items.Add(QtyTextBox.Text);
