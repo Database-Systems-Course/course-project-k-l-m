@@ -41,28 +41,78 @@ namespace RestaurantManagement
 
         private void button_AddOrder_Click(object sender, EventArgs e)
         {
-            if(textbox_CustomerNIC.Text=="")
-            {
-                MessageBox.Show("Please enter a CNIC");
-            }
-            if (textbox_FirstName.Text == "")
-            {
-                MessageBox.Show("Please enter FirstName ");
-            }
-            if (textbox_LastName.Text == "")
-            {
-                MessageBox.Show("Please enter LastName ");
-            }
+            bool flag = false;
+
             DbConnection db = new DbConnection();//
             string conString = db.GetConnectionString();//
             SqlConnection sq = new SqlConnection(conString);//
             SqlCommand command = new SqlCommand();//
             command.Connection = sq;
-            string sql = "select C from FoodItems";
+            string sql = "select NIC from Customers";
             command.CommandText = sql;
-            command.Parameters.AddWithValue("@CNIC", textbox_CustomerNIC);
+            command.Parameters.AddWithValue("@NIC", textbox_CustomerNIC.Text);
             sq.Open();
+            SqlDataReader reader = command.ExecuteReader();
+
+            while (reader.Read())
+            {
+                if (reader.GetValue(0).ToString() == textbox_CustomerNIC.Text)
+                {
+                    MessageBox.Show("Customer already in Database, No new customer added.");
+                    return;
+                    
+                }
+            }
+            reader.Close();
+            if (textbox_CustomerNIC.Text == "")
+            {
+                MessageBox.Show("Please enter a CNIC");
+                return;
+            }
+            if (textbox_FirstName.Text == "")
+            {
+                MessageBox.Show("Please enter FirstName ");
+                return;
+            }
+            if (textbox_LastName.Text == "")
+            {
+                MessageBox.Show("Please enter LastName ");
+                return;
+            }
+            MessageBox.Show("New customer added in database");
+
+            command = new SqlCommand();//
+
+            command.Connection = sq;
+            sql = "select top 1 CustomerID from Customers order by CustomerID desc";
+            command.CommandText = sql;
+            reader = command.ExecuteReader();
+            reader.Read();
+            string id = (int.Parse(reader.GetValue(0).ToString())+1).ToString();
+            reader.Close();
+            command = new SqlCommand();//
+            command.Connection = sq;
+          
+
+            sql = "insert into Customers values (@id, @NIC , @FirtsName,@LastName)";
+            command.CommandText = sql;
+
+            command.CommandText = sql;
+            command.Parameters.AddWithValue("@id", id);
+            command.Parameters.AddWithValue("@NIC", textbox_CustomerNIC.Text);
+            command.Parameters.AddWithValue("@FirtsName", textbox_FirstName.Text);
+            command.Parameters.AddWithValue("@LastName", textbox_LastName.Text);
+            MessageBox.Show(command.ExecuteNonQuery().ToString());
             
+            
+
+
+
+
+
+
+
+
 
         }
 
@@ -90,7 +140,7 @@ namespace RestaurantManagement
 
         private void Button_AddItem_Click(object sender, EventArgs e)
         {
-            if (combobox_FoodItems.SelectedItem.ToString() != "" )
+            if (combobox_FoodItems.SelectedItem != null )
             {
                 OrderedItems.Items.Add(combobox_FoodItems.SelectedItem.ToString());
                 Quantity.Items.Add(QtyTextBox.Text);
