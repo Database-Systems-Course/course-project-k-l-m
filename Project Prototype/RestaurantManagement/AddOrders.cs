@@ -42,7 +42,8 @@ namespace RestaurantManagement
         private void button_AddOrder_Click(object sender, EventArgs e)
         {
             bool flag = false;
-
+            int quantity;
+            string food;
             DbConnection db = new DbConnection();//
             string conString = db.GetConnectionString();//
             SqlConnection sq = new SqlConnection(conString);//
@@ -60,7 +61,7 @@ namespace RestaurantManagement
                 {
                     MessageBox.Show("Customer already in Database, No new customer added.");
                     return;
-                    
+
                 }
             }
             reader.Close();
@@ -88,11 +89,11 @@ namespace RestaurantManagement
             command.CommandText = sql;
             reader = command.ExecuteReader();
             reader.Read();
-            string id = (int.Parse(reader.GetValue(0).ToString())+1).ToString();
+            string id = (int.Parse(reader.GetValue(0).ToString()) + 1).ToString();
             reader.Close();
             command = new SqlCommand();//
             command.Connection = sq;
-          
+
 
             sql = "insert into Customers values (@id, @NIC , @FirtsName,@LastName)";
             command.CommandText = sql;
@@ -100,11 +101,78 @@ namespace RestaurantManagement
             command.CommandText = sql;
             command.Parameters.AddWithValue("@id", id);
             command.Parameters.AddWithValue("@NIC", textbox_CustomerNIC.Text);
+
             command.Parameters.AddWithValue("@FirtsName", textbox_FirstName.Text);
             command.Parameters.AddWithValue("@LastName", textbox_LastName.Text);
+            command.ExecuteNonQuery();
+
+            command = new SqlCommand();//
+
+            command.Connection = sq;
+            sql = "select top 1 idOrder from Orders order by idOrder desc";
+            command.CommandText = sql;
+            reader = command.ExecuteReader();
+            reader.Read();
+            id = (int.Parse(reader.GetValue(0).ToString()) + 1).ToString();
+            reader.Close();
+ 
+
+
+
+            command = new SqlCommand();//
+            command.Connection = sq;
+
+            sql = "select CustomerID from Customers where NIC = @NIC";
+            command.CommandText = sql;
+            command.Parameters.AddWithValue("@NIC", textbox_CustomerNIC.Text);
+
+            reader = command.ExecuteReader();
+            reader.Read();
+            string CustID = int.Parse(reader.GetValue(0).ToString()).ToString();
+            reader.Close();
+
+
+            command = new SqlCommand();//
+            command.Connection = sq;
+
+            sql = "insert into Orders values (@id, @custId, @staffid ,@date)";
+            command.CommandText = sql;
+
+            command.Parameters.AddWithValue("@id", id);
+            command.Parameters.AddWithValue("@custId", CustID);
+
+            command.Parameters.AddWithValue("@staffid", (comboBox1.Text));
+            command.Parameters.Add("@date", SqlDbType.Date).Value = dateTimePicker1.Value.Date;
+
+
             MessageBox.Show(command.ExecuteNonQuery().ToString());
-            
-            
+
+            for (int i = 0; i < OrderedItems.Items.Count - 1; i++)
+            {
+                food = OrderedItems.Items[i].ToString();
+                quantity = int.Parse(Quantity.Items[i].ToString());
+
+                command = new SqlCommand();//
+                command.Connection = sq;
+                sql = "select idFood from FoodItems where Name = @food";
+                command.CommandText = sql;
+                command.Parameters.AddWithValue("@food", food);
+                reader = command.ExecuteReader();
+                reader.Read();
+                string foodid = int.Parse(reader.GetValue(0).ToString()).ToString();
+                reader.Close();
+
+                command = new SqlCommand();//
+                command.Connection = sq;
+                sql = "insert into OrderItems values (@id, @foodid , @Quantity)";
+                command.CommandText = sql;
+                command.Parameters.AddWithValue("@id", int.Parse(comboBox1.Text));
+                command.Parameters.AddWithValue("@foodid", foodid);
+                command.Parameters.AddWithValue("@Quantity", quantity);
+                command.ExecuteNonQuery();
+
+            }
+
 
 
 
