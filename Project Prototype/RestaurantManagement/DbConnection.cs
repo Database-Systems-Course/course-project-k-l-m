@@ -13,7 +13,10 @@ namespace RestaurantManagement
 {
     class DbConnection
     {
+        //Laiba Connection String
         private static string myConnectionString = @"server=LFK-HP\SQLEXPRESS;Initial Catalog=restaurant;Integrated Security=True";
+        //Shahzain Connection String
+        //private static string myConnectionString = "server=whateveritis;Initial Catalog=restaurant;Integrated Security=True";
         public SqlConnection conn = new SqlConnection(myConnectionString);
         public SqlCommand cmd = new SqlCommand();
 

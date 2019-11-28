@@ -1,6 +1,6 @@
 CREATE TABLE FoodItems (
-  idFood CHAR   NOT NULL ,
-  Name VARCHAR    ,
+  idFood INTEGER  NOT NULL ,
+  [Name] VARCHAR(50)    ,
   UnitPrice INTEGER      ,
 PRIMARY KEY(idFood));
 
@@ -8,8 +8,8 @@ PRIMARY KEY(idFood));
 
 
 CREATE TABLE Jobs (
-  idJob CHAR(15)   NOT NULL ,
-  JobTitle VARCHAR    ,
+  idJob INTEGER NOT NULL ,
+  JobTitle VARCHAR(50)    ,
   HourlyWages INTEGER      ,
 PRIMARY KEY(idJob));
 
@@ -17,8 +17,8 @@ PRIMARY KEY(idJob));
 
 
 CREATE TABLE Branch (
-  idBranch CHAR(15)   NOT NULL ,
-  BranchName VARCHAR    ,
+  idBranch INTEGER NOT NULL ,
+  BranchName VARCHAR(50)   ,
   Address VARCHAR      ,
 PRIMARY KEY(idBranch));
 
@@ -26,22 +26,22 @@ PRIMARY KEY(idBranch));
 
 
 CREATE TABLE Customers (
-  CustomerID CHAR   NOT NULL ,
-  NIC CHAR   NOT NULL ,
-  FirtsName VARCHAR   NOT NULL ,
-  LastName VARCHAR      ,
+  CustomerID INTEGER NOT NULL ,
+  NIC INTEGER NOT NULL ,
+  FirtsName VARCHAR(50) NOT NULL ,
+  LastName VARCHAR(50)     ,
 PRIMARY KEY(CustomerID));
 
 
 
 
 CREATE TABLE Staff (
-  idStaff CHAR(15)   NOT NULL ,
-  Jobs_idJob CHAR(15)   NOT NULL ,
-  Branch_idBranch CHAR(15)   NOT NULL ,
+  idStaff INTEGER NOT NULL ,
+  Jobs_idJob INTEGER NOT NULL ,
+  Branch_idBranch INTEGER  NOT NULL ,
   NIC CHAR   NOT NULL ,
-  FirstName VARCHAR   NOT NULL ,
-  LastName VARCHAR    ,
+  FirstName VARCHAR(50) NOT NULL ,
+  LastName VARCHAR(50)   ,
   HireDate DATE    ,
   HoursPerDay INTEGER      ,
 PRIMARY KEY(idStaff)    ,
@@ -60,9 +60,9 @@ CREATE INDEX IFK_aredoneby ON Staff (Jobs_idJob);
 
 
 CREATE TABLE Orders (
-  idOrder CHAR   NOT NULL ,
-  Customers_CustomerID CHAR   NOT NULL ,
-  Staff_idStaff CHAR(15)   NOT NULL ,
+  idOrder INTEGER NOT NULL ,
+  Customers_CustomerID INTEGER NOT NULL ,
+  Staff_idStaff INTEGER NOT NULL ,
   OrderDate DATETIME      ,
 PRIMARY KEY(idOrder)    ,
   FOREIGN KEY(Staff_idStaff)
@@ -80,8 +80,8 @@ CREATE INDEX IFK_place ON Orders (Customers_CustomerID);
 
 
 CREATE TABLE OrderItems (
-  Orders_idOrder CHAR   NOT NULL ,
-  FoodItems_idFood CHAR   NOT NULL ,
+  Orders_idOrder INTEGER NOT NULL ,
+  FoodItems_idFood INTEGER NOT NULL ,
   Quantity INTEGER      ,
 PRIMARY KEY(Orders_idOrder, FoodItems_idFood)    ,
   FOREIGN KEY(Orders_idOrder)
