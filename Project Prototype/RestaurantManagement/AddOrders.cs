@@ -41,7 +41,7 @@ namespace RestaurantManagement
 
         private void button_AddOrder_Click(object sender, EventArgs e)
         {
-            bool flag = false;
+            //bool flag = false;
             int quantity;
             string food;
             DbConnection db = new DbConnection();//
