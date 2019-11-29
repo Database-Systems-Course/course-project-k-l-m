@@ -97,6 +97,18 @@ CREATE INDEX Orders_has_FoodItems_FKIndex2 ON OrderItems (FoodItems_idFood);
 CREATE INDEX IFK_contain ON OrderItems (Orders_idOrder);
 CREATE INDEX IFK_used ON OrderItems (FoodItems_idFood);
 
+create procedure [Staff Display] @NIC integer = '%', 
+@FirstName varchar(255)='%', @LastName varchar(255)='%', 
+@BranchId integer='%', @JobTitle varchar(255)='%', @HiringData Date='%', 
+@WorkHours integer='%'
+as
+select s.FirstName,s.LastName,b.idBranch,j.JobTitle,s.HireDate,s.HoursPerDay 
+from Staff s inner join Branch b on s.Branch_idBranch = b.idBranch
+inner join Jobs j on s.Jobs_idJob = j.idJob
+where (s.NIC = @NIC) AND (s.FirstName = @FirstName) and (s.LastName = @LastName) 
+and (s.Branch_idBranch = @BranchId) and (j.JobTitle = @JobTitle) and (s.HireDate = @HiringData)
+and (s.HoursPerDay = @WorkHours)
+go
 
 Insert into Branch(idBranch,BranchName,[Address]) values(1,'Town','ABCArea')
 
