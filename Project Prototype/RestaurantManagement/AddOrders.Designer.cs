@@ -32,7 +32,7 @@
             this.button_AddOrder = new System.Windows.Forms.Button();
             this.label_Date = new System.Windows.Forms.Label();
             this.groupbox_StaffDetails = new System.Windows.Forms.GroupBox();
-            this.textbox_StaffID = new System.Windows.Forms.TextBox();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.label2 = new System.Windows.Forms.Label();
             this.groupbox_CustomerDetails = new System.Windows.Forms.GroupBox();
             this.textbox_LastName = new System.Windows.Forms.TextBox();
@@ -47,13 +47,16 @@
             this.button_BackToMenu = new System.Windows.Forms.Button();
             this.OrderedItems = new System.Windows.Forms.ListBox();
             this.button_AddItem = new System.Windows.Forms.Button();
+            this.label3 = new System.Windows.Forms.Label();
+            this.QtyTextBox = new System.Windows.Forms.TextBox();
+            this.Quantity = new System.Windows.Forms.ListBox();
             this.groupbox_StaffDetails.SuspendLayout();
             this.groupbox_CustomerDetails.SuspendLayout();
             this.SuspendLayout();
             // 
             // dateTimePicker1
             // 
-            this.dateTimePicker1.Location = new System.Drawing.Point(422, 70);
+            this.dateTimePicker1.Location = new System.Drawing.Point(424, 74);
             this.dateTimePicker1.Name = "dateTimePicker1";
             this.dateTimePicker1.Size = new System.Drawing.Size(195, 20);
             this.dateTimePicker1.TabIndex = 10;
@@ -83,7 +86,7 @@
             // 
             // groupbox_StaffDetails
             // 
-            this.groupbox_StaffDetails.Controls.Add(this.textbox_StaffID);
+            this.groupbox_StaffDetails.Controls.Add(this.comboBox1);
             this.groupbox_StaffDetails.Controls.Add(this.label2);
             this.groupbox_StaffDetails.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupbox_StaffDetails.Location = new System.Drawing.Point(45, 61);
@@ -93,12 +96,13 @@
             this.groupbox_StaffDetails.TabStop = false;
             this.groupbox_StaffDetails.Text = "Staff Details";
             // 
-            // textbox_StaffID
+            // comboBox1
             // 
-            this.textbox_StaffID.Location = new System.Drawing.Point(78, 31);
-            this.textbox_StaffID.Name = "textbox_StaffID";
-            this.textbox_StaffID.Size = new System.Drawing.Size(147, 20);
-            this.textbox_StaffID.TabIndex = 1;
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Location = new System.Drawing.Point(78, 30);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(147, 21);
+            this.comboBox1.TabIndex = 16;
             // 
             // label2
             // 
@@ -138,6 +142,7 @@
             this.textbox_FirstName.Name = "textbox_FirstName";
             this.textbox_FirstName.Size = new System.Drawing.Size(131, 20);
             this.textbox_FirstName.TabIndex = 6;
+            this.textbox_FirstName.TextChanged += new System.EventHandler(this.Textbox_FirstName_TextChanged);
             // 
             // textbox_CustomerNIC
             // 
@@ -149,7 +154,7 @@
             // label_LastName
             // 
             this.label_LastName.AutoSize = true;
-            this.label_LastName.Location = new System.Drawing.Point(6, 90);
+            this.label_LastName.Location = new System.Drawing.Point(14, 87);
             this.label_LastName.Name = "label_LastName";
             this.label_LastName.Size = new System.Drawing.Size(71, 13);
             this.label_LastName.TabIndex = 4;
@@ -158,7 +163,7 @@
             // label_CustomerNIC
             // 
             this.label_CustomerNIC.AutoSize = true;
-            this.label_CustomerNIC.Location = new System.Drawing.Point(6, 34);
+            this.label_CustomerNIC.Location = new System.Drawing.Point(9, 33);
             this.label_CustomerNIC.Name = "label_CustomerNIC";
             this.label_CustomerNIC.Size = new System.Drawing.Size(88, 13);
             this.label_CustomerNIC.TabIndex = 1;
@@ -167,7 +172,7 @@
             // label_FirstName
             // 
             this.label_FirstName.AutoSize = true;
-            this.label_FirstName.Location = new System.Drawing.Point(6, 62);
+            this.label_FirstName.Location = new System.Drawing.Point(14, 59);
             this.label_FirstName.Name = "label_FirstName";
             this.label_FirstName.Size = new System.Drawing.Size(71, 13);
             this.label_FirstName.TabIndex = 3;
@@ -182,6 +187,7 @@
             this.label1.Size = new System.Drawing.Size(91, 20);
             this.label1.TabIndex = 8;
             this.label1.Text = "Add Order";
+            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // combobox_FoodItems
             // 
@@ -216,7 +222,7 @@
             this.OrderedItems.FormattingEnabled = true;
             this.OrderedItems.Location = new System.Drawing.Point(58, 229);
             this.OrderedItems.Name = "OrderedItems";
-            this.OrderedItems.Size = new System.Drawing.Size(218, 186);
+            this.OrderedItems.Size = new System.Drawing.Size(182, 186);
             this.OrderedItems.TabIndex = 18;
             // 
             // button_AddItem
@@ -227,12 +233,43 @@
             this.button_AddItem.TabIndex = 19;
             this.button_AddItem.Text = "Add Item";
             this.button_AddItem.UseVisualStyleBackColor = true;
+            this.button_AddItem.Click += new System.EventHandler(this.Button_AddItem_Click);
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(56, 191);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(58, 13);
+            this.label3.TabIndex = 20;
+            this.label3.Text = "Quantity:";
+            // 
+            // QtyTextBox
+            // 
+            this.QtyTextBox.Location = new System.Drawing.Point(123, 190);
+            this.QtyTextBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.QtyTextBox.Name = "QtyTextBox";
+            this.QtyTextBox.Size = new System.Drawing.Size(52, 20);
+            this.QtyTextBox.TabIndex = 21;
+            this.QtyTextBox.Text = "1";
+            // 
+            // Quantity
+            // 
+            this.Quantity.FormattingEnabled = true;
+            this.Quantity.Location = new System.Drawing.Point(236, 229);
+            this.Quantity.Name = "Quantity";
+            this.Quantity.Size = new System.Drawing.Size(68, 186);
+            this.Quantity.TabIndex = 22;
             // 
             // AddOrders
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(689, 450);
+            this.ClientSize = new System.Drawing.Size(685, 389);
+            this.Controls.Add(this.Quantity);
+            this.Controls.Add(this.QtyTextBox);
+            this.Controls.Add(this.label3);
             this.Controls.Add(this.button_AddItem);
             this.Controls.Add(this.OrderedItems);
             this.Controls.Add(this.button_BackToMenu);
@@ -246,6 +283,7 @@
             this.Controls.Add(this.label1);
             this.Name = "AddOrders";
             this.Text = "AddOrders";
+            this.Load += new System.EventHandler(this.AddOrders_Load);
             this.groupbox_StaffDetails.ResumeLayout(false);
             this.groupbox_StaffDetails.PerformLayout();
             this.groupbox_CustomerDetails.ResumeLayout(false);
@@ -261,12 +299,10 @@
         private System.Windows.Forms.Button button_AddOrder;
         private System.Windows.Forms.Label label_Date;
         private System.Windows.Forms.GroupBox groupbox_StaffDetails;
-        private System.Windows.Forms.TextBox textbox_StaffID;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.GroupBox groupbox_CustomerDetails;
         private System.Windows.Forms.TextBox textbox_LastName;
         private System.Windows.Forms.TextBox textbox_FirstName;
-        private System.Windows.Forms.TextBox textbox_CustomerNIC;
         private System.Windows.Forms.Label label_LastName;
         private System.Windows.Forms.Label label_CustomerNIC;
         private System.Windows.Forms.Label label_FirstName;
@@ -276,5 +312,10 @@
         private System.Windows.Forms.Button button_BackToMenu;
         private System.Windows.Forms.ListBox OrderedItems;
         private System.Windows.Forms.Button button_AddItem;
+        private System.Windows.Forms.TextBox textbox_CustomerNIC;
+        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.TextBox QtyTextBox;
+        private System.Windows.Forms.ListBox Quantity;
     }
 }

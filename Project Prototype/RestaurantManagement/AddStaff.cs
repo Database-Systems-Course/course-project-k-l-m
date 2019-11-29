@@ -71,5 +71,10 @@ namespace RestaurantManagement//
         {
 
         }
+
+        private void Textbox_FirstName_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }
