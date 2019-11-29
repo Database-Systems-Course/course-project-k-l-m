@@ -44,10 +44,10 @@
             this.label_FirstName = new System.Windows.Forms.Label();
             this.label_NIC = new System.Windows.Forms.Label();
             this.label_Search_Staff = new System.Windows.Forms.Label();
-            this.SearchResults = new System.Windows.Forms.ListBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.button_View = new System.Windows.Forms.Button();
             this.button_BackToMenu = new System.Windows.Forms.Button();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
             // datetimepicker_HiringDate
@@ -56,6 +56,7 @@
             this.datetimepicker_HiringDate.Name = "datetimepicker_HiringDate";
             this.datetimepicker_HiringDate.Size = new System.Drawing.Size(177, 20);
             this.datetimepicker_HiringDate.TabIndex = 31;
+            this.datetimepicker_HiringDate.ValueChanged += new System.EventHandler(this.datetimepicker_HiringDate_ValueChanged);
             // 
             // textbox_DailyWorkHours
             // 
@@ -98,15 +99,17 @@
             this.textbox_NIC.Name = "textbox_NIC";
             this.textbox_NIC.Size = new System.Drawing.Size(177, 20);
             this.textbox_NIC.TabIndex = 25;
+            this.textbox_NIC.TextChanged += new System.EventHandler(this.textbox_NIC_TextChanged);
             // 
             // button_Search_Staff
             // 
-            this.button_Search_Staff.Location = new System.Drawing.Point(235, 350);
+            this.button_Search_Staff.Location = new System.Drawing.Point(235, 334);
             this.button_Search_Staff.Name = "button_Search_Staff";
             this.button_Search_Staff.Size = new System.Drawing.Size(75, 23);
             this.button_Search_Staff.TabIndex = 24;
             this.button_Search_Staff.Text = "Search ";
             this.button_Search_Staff.UseVisualStyleBackColor = true;
+            this.button_Search_Staff.Click += new System.EventHandler(this.button_Search_Staff_Click);
             // 
             // label_DailyWorkHours
             // 
@@ -116,6 +119,7 @@
             this.label_DailyWorkHours.Size = new System.Drawing.Size(93, 13);
             this.label_DailyWorkHours.TabIndex = 23;
             this.label_DailyWorkHours.Text = "Daily Work Hours:";
+            this.label_DailyWorkHours.Click += new System.EventHandler(this.label_DailyWorkHours_Click);
             // 
             // label_HiringDate
             // 
@@ -125,6 +129,7 @@
             this.label_HiringDate.Size = new System.Drawing.Size(63, 13);
             this.label_HiringDate.TabIndex = 22;
             this.label_HiringDate.Text = "Hiring Date:";
+            this.label_HiringDate.Click += new System.EventHandler(this.label_HiringDate_Click);
             // 
             // label_JobTitle
             // 
@@ -134,6 +139,7 @@
             this.label_JobTitle.Size = new System.Drawing.Size(50, 13);
             this.label_JobTitle.TabIndex = 21;
             this.label_JobTitle.Text = "Job Title:";
+            this.label_JobTitle.Click += new System.EventHandler(this.label_JobTitle_Click);
             // 
             // label_BranchID
             // 
@@ -143,6 +149,7 @@
             this.label_BranchID.Size = new System.Drawing.Size(58, 13);
             this.label_BranchID.TabIndex = 20;
             this.label_BranchID.Text = "Branch ID:";
+            this.label_BranchID.Click += new System.EventHandler(this.label_BranchID_Click);
             // 
             // label_LastName
             // 
@@ -152,6 +159,7 @@
             this.label_LastName.Size = new System.Drawing.Size(61, 13);
             this.label_LastName.TabIndex = 19;
             this.label_LastName.Text = "Last Name:";
+            this.label_LastName.Click += new System.EventHandler(this.label_LastName_Click);
             // 
             // label_FirstName
             // 
@@ -161,6 +169,7 @@
             this.label_FirstName.Size = new System.Drawing.Size(60, 13);
             this.label_FirstName.TabIndex = 18;
             this.label_FirstName.Text = "First Name:";
+            this.label_FirstName.Click += new System.EventHandler(this.label_FirstName_Click);
             // 
             // label_NIC
             // 
@@ -182,15 +191,6 @@
             this.label_Search_Staff.Text = "Search Staff";
             this.label_Search_Staff.Click += new System.EventHandler(this.label_AddStaff_Click);
             // 
-            // SearchResults
-            // 
-            this.SearchResults.BackColor = System.Drawing.Color.AliceBlue;
-            this.SearchResults.FormattingEnabled = true;
-            this.SearchResults.Location = new System.Drawing.Point(407, 94);
-            this.SearchResults.Name = "SearchResults";
-            this.SearchResults.Size = new System.Drawing.Size(234, 212);
-            this.SearchResults.TabIndex = 32;
-            // 
             // label1
             // 
             this.label1.AutoSize = true;
@@ -201,18 +201,9 @@
             this.label1.TabIndex = 33;
             this.label1.Text = "Results";
             // 
-            // button_View
-            // 
-            this.button_View.Location = new System.Drawing.Point(566, 350);
-            this.button_View.Name = "button_View";
-            this.button_View.Size = new System.Drawing.Size(75, 23);
-            this.button_View.TabIndex = 34;
-            this.button_View.Text = "View";
-            this.button_View.UseVisualStyleBackColor = true;
-            // 
             // button_BackToMenu
             // 
-            this.button_BackToMenu.Location = new System.Drawing.Point(512, 415);
+            this.button_BackToMenu.Location = new System.Drawing.Point(540, 415);
             this.button_BackToMenu.Name = "button_BackToMenu";
             this.button_BackToMenu.Size = new System.Drawing.Size(129, 23);
             this.button_BackToMenu.TabIndex = 35;
@@ -220,15 +211,23 @@
             this.button_BackToMenu.UseVisualStyleBackColor = true;
             this.button_BackToMenu.Click += new System.EventHandler(this.button_BackToMenu_Click);
             // 
+            // dataGridView1
+            // 
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Location = new System.Drawing.Point(344, 91);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.Size = new System.Drawing.Size(325, 228);
+            this.dataGridView1.TabIndex = 36;
+            this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
+            // 
             // SearchStaff
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(681, 450);
+            this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.button_BackToMenu);
-            this.Controls.Add(this.button_View);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.SearchResults);
             this.Controls.Add(this.datetimepicker_HiringDate);
             this.Controls.Add(this.textbox_DailyWorkHours);
             this.Controls.Add(this.textbox_JobTitle);
@@ -247,6 +246,8 @@
             this.Controls.Add(this.label_Search_Staff);
             this.Name = "SearchStaff";
             this.Text = "SearchStaff";
+            this.Load += new System.EventHandler(this.SearchStaff_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -270,9 +271,8 @@
         private System.Windows.Forms.Label label_FirstName;
         private System.Windows.Forms.Label label_NIC;
         private System.Windows.Forms.Label label_Search_Staff;
-        private System.Windows.Forms.ListBox SearchResults;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Button button_View;
         private System.Windows.Forms.Button button_BackToMenu;
+        private System.Windows.Forms.DataGridView dataGridView1;
     }
 }
