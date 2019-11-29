@@ -30,7 +30,6 @@ namespace RestaurantManagement
             DbConnection db = new DbConnection();//
             string connString = db.GetConnectionString();
             con = new SqlConnection(connString);
-            con.ConnectionString = "server=DESKTOP-09G2FL8; Initial Catalog=WSMS; Integrated Security=true;";
             SqlCommand cmd = new SqlCommand();
             cmd.Connection = con;
 
