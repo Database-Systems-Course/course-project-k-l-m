@@ -95,6 +95,7 @@
             this.label1.Size = new System.Drawing.Size(91, 20);
             this.label1.TabIndex = 2;
             this.label1.Text = "Add Order";
+            this.label1.Click += new System.EventHandler(this.label1_Click_1);
             // 
             // label_FirstName
             // 
@@ -532,7 +533,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(615, 450);
+            this.ClientSize = new System.Drawing.Size(606, 450);
             this.Controls.Add(this.button_BackToMenu);
             this.Controls.Add(this.dateTimePicker1);
             this.Controls.Add(this.button_AddOrder);

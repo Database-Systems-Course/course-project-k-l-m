@@ -41,7 +41,7 @@ namespace RestaurantManagement
 
         private void button_AddOrder_Click(object sender, EventArgs e)
         {
-            bool flag = false;
+            //bool flag = false;
             int quantity;
             string id;
             string CustID;
@@ -285,6 +285,11 @@ namespace RestaurantManagement
         }
 
         private void Textbox_FirstName_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label1_Click(object sender, EventArgs e)
         {
 
         }
