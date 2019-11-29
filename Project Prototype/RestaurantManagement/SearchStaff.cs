@@ -15,7 +15,6 @@ namespace RestaurantManagement
     public partial class SearchStaff : Form
     {
         string var = "";
-        SqlConnection con;
 
         public SearchStaff()
         {
@@ -26,7 +25,11 @@ namespace RestaurantManagement
 
         private void DisplayData()
         {
-            con = new SqlConnection();
+            
+            SqlConnection con;
+            DbConnection db = new DbConnection();//
+            string connString = db.GetConnectionString();
+            con = new SqlConnection(connString);
             con.ConnectionString = "server=DESKTOP-09G2FL8; Initial Catalog=WSMS; Integrated Security=true;";
             SqlCommand cmd = new SqlCommand();
             cmd.Connection = con;
