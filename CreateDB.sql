@@ -1,6 +1,6 @@
-create procedure [Staff Display] @NIC integer = NULL, 
+alter procedure [Staff Display] @NIC integer = NULL, 
 @FirstName varchar(255)= NULL, @LastName varchar(255)= NULL, 
-@BranchId integer= NULL, @JobTitle varchar(255)= NULL, @HiringData Date= NULL, 
+@BranchId integer= NULL, @JobTitle varchar(255)= NULL, @HiringDate Date= NULL, 
 @WorkHours integer= NULL	
 as
 select s.FirstName,s.LastName,b.idBranch,j.JobTitle,s.HireDate,s.HoursPerDay 
@@ -11,7 +11,7 @@ and (s.FirstName like ISNULL(@FirstName,s.FirstName)+'%')
 and (s.LastName like ISNULL(@LastName,s.LastName)+'%') 
 and (s.Branch_idBranch like CONVERT(varchar(5),ISNULL(@BranchId,s.Branch_idBranch))+'%') 
 and (j.JobTitle like ISNULL(@JobTitle,j.JobTitle)+'%') 
-and (s.HireDate like CONVERT(varchar(5),ISNULL(@HiringData,s.HireDate))+'%')
+and (s.HireDate like CONVERT(varchar(5),ISNULL(@HiringDate,s.HireDate))+'%')
 and (s.HoursPerDay like CONVERT(varchar(5),ISNULL(@WorkHours,s.HoursPerDay))+'%')
 go
 
@@ -141,6 +141,3 @@ insert into OrderItems(Orders_idOrder,FoodItems_idFood,Quantity) values (2,1,1)
 insert into OrderItems(Orders_idOrder,FoodItems_idFood,Quantity) values (2,2,3)
 insert into OrderItems(Orders_idOrder,FoodItems_idFood,Quantity) values (3,1,1)
 insert into OrderItems(Orders_idOrder,FoodItems_idFood,Quantity) values (3,2,1)
-
-select * from Staff where Staff.HoursPerDay like '%'
-	EXEC [Staff Display]
