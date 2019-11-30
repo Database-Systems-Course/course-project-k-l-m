@@ -17,6 +17,8 @@ namespace RestaurantManagement
         private static string myConnectionString = @"server=LFK-HP\SQLEXPRESS;Initial Catalog=restaurant;Integrated Security=True";
         //Shahzain Connection String
         //private static string myConnectionString = "server=DESKTOP-VEVG9RB;Initial Catalog=RestaurantManagement;Integrated Security=True";
+        //Kabir connection string
+        private static string kabirConnectionString = 
         public SqlConnection conn = new SqlConnection(myConnectionString);
         public SqlCommand cmd = new SqlCommand();
 
