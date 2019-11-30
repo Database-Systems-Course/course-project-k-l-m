@@ -1,4 +1,4 @@
-alter procedure [Staff Display] @NIC integer = NULL, 
+create procedure [Staff Display] @NIC integer = NULL, 
 @FirstName varchar(255)= NULL, @LastName varchar(255)= NULL, 
 @BranchId integer= NULL, @JobTitle varchar(255)= NULL, @HiringDate Date= NULL, 
 @WorkHours integer= NULL	
