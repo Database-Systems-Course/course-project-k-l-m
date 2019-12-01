@@ -41,5 +41,20 @@ namespace RestaurantManagement
             this.Hide();
             Form.Show();
         }
+
+        private void SearchResults_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label_SearchOrder_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label_StaffID_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

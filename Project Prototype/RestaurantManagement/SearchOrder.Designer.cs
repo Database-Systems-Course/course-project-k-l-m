@@ -38,10 +38,11 @@
             this.textbox_OrderID = new System.Windows.Forms.TextBox();
             this.datetimepicker_OrderDate = new System.Windows.Forms.DateTimePicker();
             this.button_Search = new System.Windows.Forms.Button();
-            this.SearchResults = new System.Windows.Forms.ListBox();
             this.button_View = new System.Windows.Forms.Button();
             this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
             this.button_BackToMenu = new System.Windows.Forms.Button();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
             // label_SearchOrder
@@ -53,11 +54,12 @@
             this.label_SearchOrder.Size = new System.Drawing.Size(116, 20);
             this.label_SearchOrder.TabIndex = 0;
             this.label_SearchOrder.Text = "Search Order";
+            this.label_SearchOrder.Click += new System.EventHandler(this.label_SearchOrder_Click);
             // 
             // label_CustomerNIC
             // 
             this.label_CustomerNIC.AutoSize = true;
-            this.label_CustomerNIC.Location = new System.Drawing.Point(29, 70);
+            this.label_CustomerNIC.Location = new System.Drawing.Point(22, 71);
             this.label_CustomerNIC.Name = "label_CustomerNIC";
             this.label_CustomerNIC.Size = new System.Drawing.Size(75, 13);
             this.label_CustomerNIC.TabIndex = 1;
@@ -67,74 +69,67 @@
             // label_OrderID
             // 
             this.label_OrderID.AutoSize = true;
-            this.label_OrderID.Location = new System.Drawing.Point(438, 70);
+            this.label_OrderID.Location = new System.Drawing.Point(472, 68);
             this.label_OrderID.Name = "label_OrderID";
-            this.label_OrderID.Size = new System.Drawing.Size(44, 13);
+            this.label_OrderID.Size = new System.Drawing.Size(47, 13);
             this.label_OrderID.TabIndex = 2;
-            this.label_OrderID.Text = "OrderID";
+            this.label_OrderID.Text = "OrderID:";
             // 
             // label_StaffID
             // 
             this.label_StaffID.AutoSize = true;
-            this.label_StaffID.Location = new System.Drawing.Point(30, 96);
+            this.label_StaffID.Location = new System.Drawing.Point(51, 95);
             this.label_StaffID.Name = "label_StaffID";
-            this.label_StaffID.Size = new System.Drawing.Size(43, 13);
+            this.label_StaffID.Size = new System.Drawing.Size(46, 13);
             this.label_StaffID.TabIndex = 3;
-            this.label_StaffID.Text = "Staff ID";
+            this.label_StaffID.Text = "Staff ID:";
+            this.label_StaffID.Click += new System.EventHandler(this.label_StaffID_Click);
             // 
             // label_OrderDate
             // 
             this.label_OrderDate.AutoSize = true;
-            this.label_OrderDate.Location = new System.Drawing.Point(438, 96);
+            this.label_OrderDate.Location = new System.Drawing.Point(457, 96);
             this.label_OrderDate.Name = "label_OrderDate";
-            this.label_OrderDate.Size = new System.Drawing.Size(59, 13);
+            this.label_OrderDate.Size = new System.Drawing.Size(62, 13);
             this.label_OrderDate.TabIndex = 4;
-            this.label_OrderDate.Text = "Order Date";
+            this.label_OrderDate.Text = "Order Date:";
             // 
             // textbox_CustomerNIC
             // 
-            this.textbox_CustomerNIC.Location = new System.Drawing.Point(126, 69);
+            this.textbox_CustomerNIC.Location = new System.Drawing.Point(103, 68);
             this.textbox_CustomerNIC.Name = "textbox_CustomerNIC";
             this.textbox_CustomerNIC.Size = new System.Drawing.Size(199, 20);
             this.textbox_CustomerNIC.TabIndex = 5;
             // 
             // textbox_StaffID
             // 
-            this.textbox_StaffID.Location = new System.Drawing.Point(126, 93);
+            this.textbox_StaffID.Location = new System.Drawing.Point(103, 92);
             this.textbox_StaffID.Name = "textbox_StaffID";
             this.textbox_StaffID.Size = new System.Drawing.Size(199, 20);
             this.textbox_StaffID.TabIndex = 6;
             // 
             // textbox_OrderID
             // 
-            this.textbox_OrderID.Location = new System.Drawing.Point(525, 69);
+            this.textbox_OrderID.Location = new System.Drawing.Point(525, 65);
             this.textbox_OrderID.Name = "textbox_OrderID";
             this.textbox_OrderID.Size = new System.Drawing.Size(200, 20);
             this.textbox_OrderID.TabIndex = 7;
             // 
             // datetimepicker_OrderDate
             // 
-            this.datetimepicker_OrderDate.Location = new System.Drawing.Point(525, 95);
+            this.datetimepicker_OrderDate.Location = new System.Drawing.Point(525, 91);
             this.datetimepicker_OrderDate.Name = "datetimepicker_OrderDate";
             this.datetimepicker_OrderDate.Size = new System.Drawing.Size(200, 20);
             this.datetimepicker_OrderDate.TabIndex = 8;
             // 
             // button_Search
             // 
-            this.button_Search.Location = new System.Drawing.Point(650, 144);
+            this.button_Search.Location = new System.Drawing.Point(632, 129);
             this.button_Search.Name = "button_Search";
-            this.button_Search.Size = new System.Drawing.Size(75, 23);
+            this.button_Search.Size = new System.Drawing.Size(93, 24);
             this.button_Search.TabIndex = 9;
             this.button_Search.Text = "Search";
             this.button_Search.UseVisualStyleBackColor = true;
-            // 
-            // SearchResults
-            // 
-            this.SearchResults.FormattingEnabled = true;
-            this.SearchResults.Location = new System.Drawing.Point(33, 188);
-            this.SearchResults.Name = "SearchResults";
-            this.SearchResults.Size = new System.Drawing.Size(692, 212);
-            this.SearchResults.TabIndex = 10;
             // 
             // button_View
             // 
@@ -156,14 +151,22 @@
             this.button_BackToMenu.UseVisualStyleBackColor = true;
             this.button_BackToMenu.Click += new System.EventHandler(this.button_BackToMenu_Click);
             // 
+            // dataGridView1
+            // 
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Location = new System.Drawing.Point(32, 161);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.Size = new System.Drawing.Size(693, 243);
+            this.dataGridView1.TabIndex = 13;
+            // 
             // SearchOrder
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(774, 458);
+            this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.button_BackToMenu);
             this.Controls.Add(this.button_View);
-            this.Controls.Add(this.SearchResults);
             this.Controls.Add(this.button_Search);
             this.Controls.Add(this.datetimepicker_OrderDate);
             this.Controls.Add(this.textbox_OrderID);
@@ -177,6 +180,7 @@
             this.Name = "SearchOrder";
             this.Text = "SarchOrder";
             this.Load += new System.EventHandler(this.SarchOrder_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -194,9 +198,9 @@
         private System.Windows.Forms.TextBox textbox_OrderID;
         private System.Windows.Forms.DateTimePicker datetimepicker_OrderDate;
         private System.Windows.Forms.Button button_Search;
-        private System.Windows.Forms.ListBox SearchResults;
         private System.Windows.Forms.Button button_View;
         private System.ComponentModel.BackgroundWorker backgroundWorker1;
         private System.Windows.Forms.Button button_BackToMenu;
+        private System.Windows.Forms.DataGridView dataGridView1;
     }
 }

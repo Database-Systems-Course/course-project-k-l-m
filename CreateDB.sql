@@ -15,6 +15,20 @@ and (s.HireDate like CONVERT(varchar(5),ISNULL(@HiringDate,s.HireDate))+'%')
 and (s.HoursPerDay like CONVERT(varchar(5),ISNULL(@WorkHours,s.HoursPerDay))+'%')
 go
 
+create procedure [Order Display] @NIC integer = NULL, 
+@OrderID integer = NULL, @StaffID integer = NULL, 
+@OrderDate Datetime= NULL 	
+as
+select c.NIC, o.idOrder,s.idStaff,o.OrderDate 
+from ((Customers c left join Orders o on c.CustomerID = o.Customers_CustomerID)
+left join Staff s on s.idStaff = o.Staff_idStaff)
+where (c.NIC like Convert(varchar(15),ISNULL(@NIC,c.NIC))+'%') 
+and (o.idOrder like Convert(varchar(5),ISNULL(@OrderID,o.idOrder))+'%') 
+and (s.idStaff like Convert(varchar(5),ISNULL(@StaffID,s.idStaff))+'%') 
+and (o.OrderDate like CONVERT(varchar(5),ISNULL(@OrderDate,o.OrderDate))+'%') 
+go
+
+
 CREATE TABLE FoodItems (
   idFood INTEGER  NOT NULL ,
   [Name] VARCHAR(50)    ,

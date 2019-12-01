@@ -103,6 +103,7 @@
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(147, 21);
             this.comboBox1.TabIndex = 16;
+            this.comboBox1.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
             // 
             // label2
             // 
@@ -248,7 +249,7 @@
             // QtyTextBox
             // 
             this.QtyTextBox.Location = new System.Drawing.Point(123, 190);
-            this.QtyTextBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.QtyTextBox.Margin = new System.Windows.Forms.Padding(2);
             this.QtyTextBox.Name = "QtyTextBox";
             this.QtyTextBox.Size = new System.Drawing.Size(52, 20);
             this.QtyTextBox.TabIndex = 21;
@@ -266,7 +267,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(685, 389);
+            this.ClientSize = new System.Drawing.Size(685, 453);
             this.Controls.Add(this.Quantity);
             this.Controls.Add(this.QtyTextBox);
             this.Controls.Add(this.label3);
