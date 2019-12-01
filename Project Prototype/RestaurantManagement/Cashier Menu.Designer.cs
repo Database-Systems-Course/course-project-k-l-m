@@ -60,7 +60,7 @@
             this.Controls.Add(this.button_SearchOrder);
             this.Controls.Add(this.button_AddOrder);
             this.Name = "Manager_Menu";
-            this.Text = "Manager_Menu";
+            this.Text = "Cashier_Menu";
             this.ResumeLayout(false);
 
         }

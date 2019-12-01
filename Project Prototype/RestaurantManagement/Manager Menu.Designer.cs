@@ -100,7 +100,7 @@
             this.Controls.Add(this.button_AddOrder);
             this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "Menu";
-            this.Text = "Menu";
+            this.Text = "Manager Menu";
             this.ResumeLayout(false);
 
         }
