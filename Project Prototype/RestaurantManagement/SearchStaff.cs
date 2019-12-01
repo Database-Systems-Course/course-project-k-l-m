@@ -26,9 +26,9 @@ namespace RestaurantManagement
 
         private void DisplayData(string a)
         {
-            con = new SqlConnection();
-            con.ConnectionString = "Data Source=DESKTOP-09G2FL8\\SQLEXPRESS; Initial Catalog=Project3; Integrated Security=true;";
+            DbConnection db = new DbConnection();
 
+            con = db.conn;
             SqlCommand cmd = new SqlCommand();
             cmd.Connection = con;
 
