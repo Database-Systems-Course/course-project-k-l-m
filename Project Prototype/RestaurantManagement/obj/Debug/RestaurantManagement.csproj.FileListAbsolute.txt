@@ -40,3 +40,6 @@ E:\GitHub\course-project-k-l-m\Project Prototype\RestaurantManagement\obj\Debug\
 E:\GitHub\course-project-k-l-m\Project Prototype\RestaurantManagement\obj\Debug\RestaurantManagement.csproj.GenerateResource.cache
 E:\GitHub\course-project-k-l-m\Project Prototype\RestaurantManagement\obj\Debug\RestaurantManagement.exe
 E:\GitHub\course-project-k-l-m\Project Prototype\RestaurantManagement\obj\Debug\RestaurantManagement.pdb
+E:\GitHub\course-project-k-l-m\Project Prototype\RestaurantManagement\bin\Debug\RestaurantManagement.exe.config
+E:\GitHub\course-project-k-l-m\Project Prototype\RestaurantManagement\bin\Debug\RestaurantManagement.exe
+E:\GitHub\course-project-k-l-m\Project Prototype\RestaurantManagement\bin\Debug\RestaurantManagement.pdb
