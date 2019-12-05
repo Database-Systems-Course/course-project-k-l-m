@@ -298,6 +298,21 @@ namespace RestaurantManagement
         {
 
         }
+
+        private void PictureBox1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Quantity_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void OrderedItems_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
     }
     
 }

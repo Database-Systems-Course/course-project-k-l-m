@@ -17,7 +17,6 @@ L:\a\course-project-k-l-m\Project Prototype\RestaurantManagement\bin\Debug\Resta
 L:\a\course-project-k-l-m\Project Prototype\RestaurantManagement\bin\Debug\RestaurantManagement.exe
 L:\a\course-project-k-l-m\Project Prototype\RestaurantManagement\bin\Debug\RestaurantManagement.pdb
 L:\a\course-project-k-l-m\Project Prototype\RestaurantManagement\obj\Debug\RestaurantManagement.csprojAssemblyReference.cache
-L:\a\course-project-k-l-m\Project Prototype\RestaurantManagement\obj\Debug\RestaurantManagement.AddOrder.resources
 L:\a\course-project-k-l-m\Project Prototype\RestaurantManagement\obj\Debug\RestaurantManagement.AddOrders.resources
 L:\a\course-project-k-l-m\Project Prototype\RestaurantManagement\obj\Debug\RestaurantManagement.AddStaff.resources
 L:\a\course-project-k-l-m\Project Prototype\RestaurantManagement\obj\Debug\RestaurantManagement.Menu.resources

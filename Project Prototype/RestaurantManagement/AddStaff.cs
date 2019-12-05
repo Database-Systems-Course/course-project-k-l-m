@@ -76,5 +76,25 @@ namespace RestaurantManagement//
         {
 
         }
+
+        private void Textbox_DailyWorkHours_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Datetimepicker_HiringDate_ValueChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void ComboBox2_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Textbox_LastName_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }
