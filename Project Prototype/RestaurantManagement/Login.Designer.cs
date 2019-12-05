@@ -45,7 +45,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.textbox_UserName.Location = new System.Drawing.Point(418, 360);
             this.textbox_UserName.Name = "textbox_UserName";
-            this.textbox_UserName.Size = new System.Drawing.Size(285, 44);
+            this.textbox_UserName.Size = new System.Drawing.Size(285, 26);
             this.textbox_UserName.TabIndex = 1;
             this.textbox_UserName.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
@@ -56,7 +56,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.textbox_Password.Location = new System.Drawing.Point(418, 475);
             this.textbox_Password.Name = "textbox_Password";
-            this.textbox_Password.Size = new System.Drawing.Size(285, 44);
+            this.textbox_Password.Size = new System.Drawing.Size(285, 26);
             this.textbox_Password.TabIndex = 3;
             // 
             // button_Login
@@ -104,11 +104,11 @@
             // 
             // Login
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(16F, 36F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 19F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(972, 823);
+            this.ClientSize = new System.Drawing.Size(972, 749);
             this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.button_Login);

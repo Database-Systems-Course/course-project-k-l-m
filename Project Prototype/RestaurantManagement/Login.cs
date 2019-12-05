@@ -17,6 +17,7 @@ namespace RestaurantManagement
         public Login()
         {
             InitializeComponent();
+            
         }
 
         private void Label3_Click(object sender, EventArgs e)
@@ -26,13 +27,31 @@ namespace RestaurantManagement
 
         private void button1_Click(object sender, EventArgs e)
         {
+            bool isStaff = false;
+            bool isManager = false;
+            DbConnection db = new DbConnection();//
+            string conString = db.GetConnectionString();//
+            SqlConnection sq = new SqlConnection(conString);//
+            SqlCommand command = new SqlCommand();//
+            command.Connection = sq;
+            //string sql = "Select ;
+            //command.CommandText = sql;
+            sq.Open();
+            SqlDataReader reader = command.ExecuteReader();
             // we will put a check after connecting forms to database
             //on click we will check whether the login id and password exists in databse
-            Menu Form = new Menu();
-            this.Hide();
-            Form.Show();
-
-
+            if (isStaff==true & textbox_Password.Text.ToString()== "iamstaff")
+            {
+                Menu Form = new Menu();
+                this.Hide();
+                Form.Show();
+            }
+            if (isManager == true & textbox_Password.Text.ToString() == "iammanager")
+            {
+                Menu Form = new Menu();
+                this.Hide();
+                Form.Show();
+            }
         }
 
         private void button2_Click(object sender, EventArgs e)

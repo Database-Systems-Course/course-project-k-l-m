@@ -28,3 +28,17 @@ L:\a\course-project-k-l-m\Project Prototype\RestaurantManagement\obj\Debug\Resta
 L:\a\course-project-k-l-m\Project Prototype\RestaurantManagement\obj\Debug\RestaurantManagement.csproj.CoreCompileInputs.cache
 L:\a\course-project-k-l-m\Project Prototype\RestaurantManagement\obj\Debug\RestaurantManagement.exe
 L:\a\course-project-k-l-m\Project Prototype\RestaurantManagement\obj\Debug\RestaurantManagement.pdb
+E:\GitHub\course-project-k-l-m\Project Prototype\RestaurantManagement\bin\Debug\RestaurantManagement.exe.config
+E:\GitHub\course-project-k-l-m\Project Prototype\RestaurantManagement\bin\Debug\RestaurantManagement.exe
+E:\GitHub\course-project-k-l-m\Project Prototype\RestaurantManagement\bin\Debug\RestaurantManagement.pdb
+E:\GitHub\course-project-k-l-m\Project Prototype\RestaurantManagement\obj\Debug\RestaurantManagement.csprojAssemblyReference.cache
+E:\GitHub\course-project-k-l-m\Project Prototype\RestaurantManagement\obj\Debug\RestaurantManagement.AddOrders.resources
+E:\GitHub\course-project-k-l-m\Project Prototype\RestaurantManagement\obj\Debug\RestaurantManagement.AddStaff.resources
+E:\GitHub\course-project-k-l-m\Project Prototype\RestaurantManagement\obj\Debug\RestaurantManagement.Menu.resources
+E:\GitHub\course-project-k-l-m\Project Prototype\RestaurantManagement\obj\Debug\RestaurantManagement.Login.resources
+E:\GitHub\course-project-k-l-m\Project Prototype\RestaurantManagement\obj\Debug\RestaurantManagement.Properties.Resources.resources
+E:\GitHub\course-project-k-l-m\Project Prototype\RestaurantManagement\obj\Debug\RestaurantManagement.SearchOrder.resources
+E:\GitHub\course-project-k-l-m\Project Prototype\RestaurantManagement\obj\Debug\RestaurantManagement.SearchStaff.resources
+E:\GitHub\course-project-k-l-m\Project Prototype\RestaurantManagement\obj\Debug\RestaurantManagement.csproj.GenerateResource.cache
+E:\GitHub\course-project-k-l-m\Project Prototype\RestaurantManagement\obj\Debug\RestaurantManagement.exe
+E:\GitHub\course-project-k-l-m\Project Prototype\RestaurantManagement\obj\Debug\RestaurantManagement.pdb
