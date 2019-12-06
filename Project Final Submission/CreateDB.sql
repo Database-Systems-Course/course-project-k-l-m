@@ -14,20 +14,36 @@ and (s.Branch_idBranch like CONVERT(varchar(5),ISNULL(@BranchId,s.Branch_idBranc
 and (j.JobTitle like ISNULL(@JobTitle,j.JobTitle)+'%') 
 and (s.HireDate like CONVERT(varchar(5),ISNULL(@HiringDate,s.HireDate))+'%')
 and (s.HoursPerDay like CONVERT(varchar(5),ISNULL(@WorkHours,s.HoursPerDay))+'%')
-go
-
-create procedure [Order Display] @NIC integer = NULL, 
+GO
+CREATE procedure [Order Display] @NIC integer = NULL, 
 @OrderID integer = NULL, @StaffID integer = NULL, 
 @OrderDate Datetime= NULL 	
 as
-select c.NIC, o.idOrder,s.idStaff,o.OrderDate 
+select c.NIC, o.idOrder, c.FirtsName+' '+c.LastName as 'Customer Name', 
+s.FirstName+' '+s.LastName as 'Order Handled by' ,o.OrderDate 
 from ((Customers c left join Orders o on c.CustomerID = o.Customers_CustomerID)
 left join Staff s on s.idStaff = o.Staff_idStaff)
-where (c.NIC like Convert(varchar(15),ISNULL(@NIC,c.NIC))+'%') 
-and (o.idOrder like Convert(varchar(5),ISNULL(@OrderID,o.idOrder))+'%') 
+where (c.NIC like Convert(varchar(15),ISNULL(@NIC,c.NIC))) 
+and (o.idOrder like Convert(varchar(5),ISNULL(@OrderID,o.idOrder))) 
 and (s.idStaff like Convert(varchar(5),ISNULL(@StaffID,s.idStaff))+'%') 
 and (o.OrderDate like CONVERT(varchar(5),ISNULL(@OrderDate,o.OrderDate))+'%') 
-go
+GO
+
+CREATE procedure [Food Display] @FoodName varchar(255) = NULL, 
+@FoodPrice integer = NULL 	
+as
+select fi.idFood, fi.[Name],fi.UnitPrice 
+from FoodItems fi
+where (fi.[Name] like Convert(varchar(15),ISNULL(@FoodName,fi.[Name]))+'%') 
+and (fi.UnitPrice like Convert(varchar(5),ISNULL(@FoodPrice,fi.UnitPrice))) 
+GO
+
+create procedure [Delete Order] @FoodId integer
+as
+delete from FoodItems
+where idFood = @FoodId
+GO
+
 
 
 --CREATE DATABASE
