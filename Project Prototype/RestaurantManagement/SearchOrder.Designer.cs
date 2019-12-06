@@ -49,7 +49,7 @@
             // 
             this.label_SearchOrder.AutoSize = true;
             this.label_SearchOrder.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label_SearchOrder.Location = new System.Drawing.Point(320, 25);
+            this.label_SearchOrder.Location = new System.Drawing.Point(195, 20);
             this.label_SearchOrder.Name = "label_SearchOrder";
             this.label_SearchOrder.Size = new System.Drawing.Size(116, 20);
             this.label_SearchOrder.TabIndex = 0;
@@ -59,7 +59,7 @@
             // label_CustomerNIC
             // 
             this.label_CustomerNIC.AutoSize = true;
-            this.label_CustomerNIC.Location = new System.Drawing.Point(22, 71);
+            this.label_CustomerNIC.Location = new System.Drawing.Point(69, 61);
             this.label_CustomerNIC.Name = "label_CustomerNIC";
             this.label_CustomerNIC.Size = new System.Drawing.Size(75, 13);
             this.label_CustomerNIC.TabIndex = 1;
@@ -69,7 +69,7 @@
             // label_OrderID
             // 
             this.label_OrderID.AutoSize = true;
-            this.label_OrderID.Location = new System.Drawing.Point(472, 68);
+            this.label_OrderID.Location = new System.Drawing.Point(99, 113);
             this.label_OrderID.Name = "label_OrderID";
             this.label_OrderID.Size = new System.Drawing.Size(47, 13);
             this.label_OrderID.TabIndex = 2;
@@ -78,7 +78,7 @@
             // label_StaffID
             // 
             this.label_StaffID.AutoSize = true;
-            this.label_StaffID.Location = new System.Drawing.Point(51, 95);
+            this.label_StaffID.Location = new System.Drawing.Point(99, 87);
             this.label_StaffID.Name = "label_StaffID";
             this.label_StaffID.Size = new System.Drawing.Size(46, 13);
             this.label_StaffID.TabIndex = 3;
@@ -88,7 +88,7 @@
             // label_OrderDate
             // 
             this.label_OrderDate.AutoSize = true;
-            this.label_OrderDate.Location = new System.Drawing.Point(457, 96);
+            this.label_OrderDate.Location = new System.Drawing.Point(84, 142);
             this.label_OrderDate.Name = "label_OrderDate";
             this.label_OrderDate.Size = new System.Drawing.Size(62, 13);
             this.label_OrderDate.TabIndex = 4;
@@ -96,7 +96,7 @@
             // 
             // textbox_CustomerNIC
             // 
-            this.textbox_CustomerNIC.Location = new System.Drawing.Point(103, 68);
+            this.textbox_CustomerNIC.Location = new System.Drawing.Point(150, 58);
             this.textbox_CustomerNIC.Name = "textbox_CustomerNIC";
             this.textbox_CustomerNIC.Size = new System.Drawing.Size(199, 20);
             this.textbox_CustomerNIC.TabIndex = 5;
@@ -104,7 +104,7 @@
             // 
             // textbox_StaffID
             // 
-            this.textbox_StaffID.Location = new System.Drawing.Point(103, 92);
+            this.textbox_StaffID.Location = new System.Drawing.Point(150, 84);
             this.textbox_StaffID.Name = "textbox_StaffID";
             this.textbox_StaffID.Size = new System.Drawing.Size(199, 20);
             this.textbox_StaffID.TabIndex = 6;
@@ -112,7 +112,7 @@
             // 
             // textbox_OrderID
             // 
-            this.textbox_OrderID.Location = new System.Drawing.Point(525, 65);
+            this.textbox_OrderID.Location = new System.Drawing.Point(150, 110);
             this.textbox_OrderID.Name = "textbox_OrderID";
             this.textbox_OrderID.Size = new System.Drawing.Size(200, 20);
             this.textbox_OrderID.TabIndex = 7;
@@ -120,14 +120,14 @@
             // 
             // datetimepicker_OrderDate
             // 
-            this.datetimepicker_OrderDate.Location = new System.Drawing.Point(525, 91);
+            this.datetimepicker_OrderDate.Location = new System.Drawing.Point(149, 136);
             this.datetimepicker_OrderDate.Name = "datetimepicker_OrderDate";
             this.datetimepicker_OrderDate.Size = new System.Drawing.Size(200, 20);
             this.datetimepicker_OrderDate.TabIndex = 8;
             // 
             // button_Search
             // 
-            this.button_Search.Location = new System.Drawing.Point(632, 129);
+            this.button_Search.Location = new System.Drawing.Point(363, 162);
             this.button_Search.Name = "button_Search";
             this.button_Search.Size = new System.Drawing.Size(93, 24);
             this.button_Search.TabIndex = 9;
@@ -137,7 +137,7 @@
             // 
             // button_View
             // 
-            this.button_View.Location = new System.Drawing.Point(621, 423);
+            this.button_View.Location = new System.Drawing.Point(352, 434);
             this.button_View.Name = "button_View";
             this.button_View.Size = new System.Drawing.Size(104, 23);
             this.button_View.TabIndex = 11;
@@ -147,7 +147,7 @@
             // 
             // button_BackToMenu
             // 
-            this.button_BackToMenu.Location = new System.Drawing.Point(463, 423);
+            this.button_BackToMenu.Location = new System.Drawing.Point(12, 434);
             this.button_BackToMenu.Name = "button_BackToMenu";
             this.button_BackToMenu.Size = new System.Drawing.Size(132, 23);
             this.button_BackToMenu.TabIndex = 12;
@@ -158,9 +158,11 @@
             // dataGridView1
             // 
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(32, 161);
+            this.dataGridView1.Location = new System.Drawing.Point(12, 192);
+            this.dataGridView1.MultiSelect = false;
             this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(456, 236);
+            this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dataGridView1.Size = new System.Drawing.Size(444, 236);
             this.dataGridView1.TabIndex = 13;
             this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
@@ -168,7 +170,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(774, 458);
+            this.ClientSize = new System.Drawing.Size(467, 469);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.button_BackToMenu);
             this.Controls.Add(this.button_View);

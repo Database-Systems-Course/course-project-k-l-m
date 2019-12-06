@@ -17,6 +17,7 @@ namespace RestaurantManagement
 
         SqlConnection con;
 
+
         public SearchOrder()
         {
             InitializeComponent();
@@ -64,7 +65,7 @@ namespace RestaurantManagement
         {
             AddOrders Form = new AddOrders();
             this.Hide();
-
+            Form.
             Form.ShowDialog();
         }
 
