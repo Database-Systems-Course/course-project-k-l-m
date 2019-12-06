@@ -63,7 +63,7 @@ namespace RestaurantManagement
 
         private void button_View_Click(object sender, EventArgs e)
         {
-            AddOrders Form = new AddOrders();
+            AddOrders Form = new AddOrders("A");
             this.Hide();
             //Form.
             Form.ShowDialog();
@@ -71,7 +71,7 @@ namespace RestaurantManagement
 
         private void button_BackToMenu_Click(object sender, EventArgs e)
         {
-            Menu Form = new Menu();
+            Menu Form = new Menu("A");
             this.Hide();
             Form.Show();
         }

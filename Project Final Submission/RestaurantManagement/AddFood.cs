@@ -15,14 +15,43 @@ namespace RestaurantManagement
 {
     public partial class AddFood : Form
     {
+
+        SqlConnection con;
+
+
         public AddFood()
         {
             InitializeComponent();
         }
 
+        private void DisplayData(string a)
+        {
+            DbConnection db = new DbConnection();
+
+            con = db.conn;
+            SqlCommand cmd = new SqlCommand();
+            cmd.Connection = con;
+
+            cmd.CommandText = "EXEC[Food Display] " + a;
+            cmd.CommandType = CommandType.Text;
+            SqlDataAdapter adapter = new SqlDataAdapter(cmd);
+            DataSet ds = new DataSet();
+
+            adapter.Fill(ds, "SearchResult");
+
+            dataGridView1.DataSource = ds.Tables["SearchResult"];
+            dataGridView1.Columns[0].ReadOnly = true;
+            dataGridView1.Columns[1].ReadOnly = true;
+            dataGridView1.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
+            dataGridView1.MultiSelect = false;
+            dataGridView1.Refresh();
+
+        }
+
+
         private void button1_Click(object sender, EventArgs e)
         {
-            Menu Form = new Menu();
+            Menu Form = new Menu("A");
             this.Hide();
             Form.Show();
         }
@@ -59,6 +88,51 @@ namespace RestaurantManagement
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
+
+        }
+
+        private void button_View_Click(object sender, EventArgs e)
+        {
+            string var = "";
+
+            if (textbox_CustomerNIC.Text != "")
+            {
+                var = var + "@FoodName = '" + textbox_CustomerNIC.Text + "'";
+            }
+            else
+            {
+                var = var + "@FoodName = NULL";
+            }
+
+            Debug.WriteLine(var);
+
+            if (textbox_StaffID.Text != "")
+            {
+                var = var + "," + "@FoodPrice = '" + textbox_StaffID.Text + "'";
+            }
+            else
+            {
+                var = var + "," + "@FoodPrice = NULL";
+            }
+            DisplayData(var); 
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            DbConnection db = new DbConnection();
+
+            con = db.conn;
+            SqlCommand cmd = new SqlCommand();
+            cmd.Connection = con;
+
+            if (dataGridView1.SelectedCells.Count > 0)
+            {
+               
+
+            }
+
+            //cmd.CommandText = "EXEC[Delete Order], " + "@FoodID = "+var;
+            //cmd.CommandType = CommandType.Text;
 
         }
     }

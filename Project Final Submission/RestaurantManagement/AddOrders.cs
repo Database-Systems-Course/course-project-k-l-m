@@ -12,18 +12,36 @@ namespace RestaurantManagement
 {
     public partial class AddOrders : Form
     {
-        public AddOrders()
+        public AddOrders(string staff)
         {
+            string f;
+            MessageBox.Show(staff);
+            f = "abc";
             InitializeComponent();
             DbConnection db = new DbConnection();//
             string conString = db.GetConnectionString();//
             SqlConnection sq = new SqlConnection(conString);//
             SqlCommand command = new SqlCommand();//
             command.Connection = sq;
-            string sql = "select Name from FoodItems";
+            string sql = "select idStaff from Staff where FirstName + ' '  +LastName = '" + staff + "'";
             command.CommandText = sql;
             sq.Open();
             SqlDataReader reader = command.ExecuteReader();
+            while (reader.Read())
+            {
+                
+                f = reader.GetValue(0).ToString();
+            }
+            comboBox1.Text = f;     
+            db = new DbConnection();//
+           conString = db.GetConnectionString();//
+            sq = new SqlConnection(conString);//
+            command = new SqlCommand();//
+            command.Connection = sq;
+            sql = "select Name from FoodItems";
+            command.CommandText = sql;
+            sq.Open();
+            reader = command.ExecuteReader();
             while (reader.Read())
             {
                 combobox_FoodItems.Items.Add(reader.GetValue(0).ToString());
@@ -265,7 +283,7 @@ namespace RestaurantManagement
 
         private void button_BackToMenu_Click(object sender, EventArgs e)
         {
-            StaffUnPriv Form = new StaffUnPriv();
+            StaffUnPriv Form = new StaffUnPriv("A");
             this.Hide();
             Form.Show();
         }
@@ -310,6 +328,11 @@ namespace RestaurantManagement
         }
 
         private void OrderedItems_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void combobox_FoodItems_SelectedIndexChanged(object sender, EventArgs e)
         {
 
         }

@@ -14,7 +14,7 @@ namespace RestaurantManagement
     class DbConnection
     {
         //Laiba Connection String
-        private static string myConnectionString ="Data Source=HU-DAIO-LNL09;Initial Catalog=Project3;User ID=sa; password = M@lab9310SSe*!";
+        private static string myConnectionString = "Data Source=HU-DOPX-ML27;Initial Catalog=Project3;User ID=sa; password = M@lab9310SSe*!";
         //private static string myConnectionString = @"server=LFK-HP\SQLEXPRESS;Initial Catalog=restaurant;Integrated Security=True";
         //Shahzain Connection String
         //private static string myConnectionString = "server=DESKTOP-VEVG9RB;Initial Catalog=Project3;Integrated Security=True";

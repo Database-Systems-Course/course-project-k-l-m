@@ -199,6 +199,7 @@
             this.combobox_FoodItems.Name = "combobox_FoodItems";
             this.combobox_FoodItems.Size = new System.Drawing.Size(147, 21);
             this.combobox_FoodItems.TabIndex = 15;
+            this.combobox_FoodItems.SelectedIndexChanged += new System.EventHandler(this.combobox_FoodItems_SelectedIndexChanged);
             // 
             // label_FoodItems
             // 
@@ -261,7 +262,7 @@
             // 
             this.QtyTextBox.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.QtyTextBox.Location = new System.Drawing.Point(146, 186);
-            this.QtyTextBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.QtyTextBox.Margin = new System.Windows.Forms.Padding(2);
             this.QtyTextBox.Name = "QtyTextBox";
             this.QtyTextBox.Size = new System.Drawing.Size(52, 20);
             this.QtyTextBox.TabIndex = 21;
@@ -283,7 +284,7 @@
             this.pictureBox1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox1.BackgroundImage")));
             this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.pictureBox1.Location = new System.Drawing.Point(236, 12);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(230, 33);
             this.pictureBox1.TabIndex = 38;

@@ -10,16 +10,21 @@ using System.Windows.Forms;
 
 namespace RestaurantManagement
 {
+    
     public partial class Menu : Form
     {
-        public Menu()
+
+        public string staff1;
+        public Menu(string staff)
         {
             InitializeComponent();
+            staff1 = staff;
+
         }
 
         private void Button1_Click(object sender, EventArgs e)
         {
-            AddOrders Form = new AddOrders();
+            AddOrders Form = new AddOrders(staff1);
             this.Hide();
             Form.Show();
         }

@@ -59,7 +59,7 @@ namespace RestaurantManagement
 
         private void button_BackToMenu_Click(object sender, EventArgs e)
         {
-            Menu Form = new Menu();
+            Menu Form = new Menu("A");
             this.Hide();
             Form.Show();
         }

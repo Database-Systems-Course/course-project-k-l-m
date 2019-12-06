@@ -82,7 +82,9 @@
             this.dataGridView1.BackgroundColor = System.Drawing.Color.WhiteSmoke;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Location = new System.Drawing.Point(35, 165);
+            this.dataGridView1.MultiSelect = false;
             this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dataGridView1.Size = new System.Drawing.Size(375, 233);
             this.dataGridView1.TabIndex = 43;
             this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
@@ -127,6 +129,7 @@
             this.button_View.Size = new System.Drawing.Size(69, 61);
             this.button_View.TabIndex = 46;
             this.button_View.UseVisualStyleBackColor = false;
+            this.button_View.Click += new System.EventHandler(this.button_View_Click);
             // 
             // button1
             // 
@@ -152,6 +155,7 @@
             this.button2.Size = new System.Drawing.Size(69, 61);
             this.button2.TabIndex = 48;
             this.button2.UseVisualStyleBackColor = false;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // AddFood
             // 

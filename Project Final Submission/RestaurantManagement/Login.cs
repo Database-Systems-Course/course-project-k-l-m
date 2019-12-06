@@ -14,10 +14,25 @@ namespace RestaurantManagement
 {
     public partial class Login : Form
     {
+        public string StaffName;
         public Login()
         {
             InitializeComponent();
-            
+            DbConnection db = new DbConnection();//
+            string conString = db.GetConnectionString();//
+            SqlConnection sq = new SqlConnection(conString);//
+            SqlCommand command = new SqlCommand();//
+            command.Connection = sq;
+            string sql = "select FirstName + ' ' +  LastName from Staff";
+            command.CommandText = sql;
+
+            sq.Open();
+            SqlDataReader reader = command.ExecuteReader();
+            while (reader.Read())
+            {
+                comboBox1.Items.Add(reader.GetValue(0).ToString());
+            }
+
         }
 
         private void Label3_Click(object sender, EventArgs e)
@@ -27,6 +42,9 @@ namespace RestaurantManagement
 
         private void button1_Click(object sender, EventArgs e)
         {
+            int id2;
+
+            id2 = 1;
             bool isStaff = true;
             bool isManager = true;
             /*
@@ -43,18 +61,36 @@ namespace RestaurantManagement
             */
             // we will put a check after connecting forms to database
             //on click we will check whether the login id and password exists in databse
-            if (isStaff==true & textbox_Password.Text.ToString()== "iamstaff")
+
+            StaffName = comboBox1.SelectedItem.ToString();
+            DbConnection db = new DbConnection();//
+            string conString = db.GetConnectionString();//
+            SqlConnection sq = new SqlConnection(conString);//
+            SqlCommand command = new SqlCommand();//
+            command.Connection = sq;
+            string sql = "select Jobs_idJob from Staff where FirstName + ' ' +  LastName = '" + StaffName + "'";
+            command.CommandText = sql;
+            
+            sq.Open();
+            SqlDataReader reader = command.ExecuteReader();
+            while (reader.Read())
             {
-                StaffUnPriv Form = new StaffUnPriv();
+                id2 = int.Parse(reader.GetValue(0).ToString());
+            }
+            if (isStaff == true & textbox_Password.Text.ToString() == "iamstaff" && id2 != 1)
+            {
+                StaffUnPriv Form = new StaffUnPriv(StaffName);
                 this.Hide();
                 Form.Show();
 
             }
-            if (isManager == true & textbox_Password.Text.ToString() == "iammanager")
+            if (id2 == 1 && isManager == true && textbox_Password.Text.ToString() == "iammanager")
             {
-                Menu Form = new Menu();
+                MessageBox.Show(StaffName);
+                Menu Form = new Menu(StaffName);
                 this.Hide();
                 Form.Show();
+                
             }
         }
 
@@ -69,6 +105,11 @@ namespace RestaurantManagement
         }
 
         private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
 
         }

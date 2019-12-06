@@ -12,14 +12,16 @@ namespace RestaurantManagement
 {
     public partial class StaffUnPriv : Form
     {
-        public StaffUnPriv()
+        public string staff;
+        public StaffUnPriv(string staff)
         {
             InitializeComponent();
+            this.staff = staff;
         }
 
         private void button_AddOrder_Click(object sender, EventArgs e)
         {
-            AddOrders Form = new AddOrders();
+            AddOrders Form = new AddOrders(staff);
             this.Hide();
             Form.Show();
 

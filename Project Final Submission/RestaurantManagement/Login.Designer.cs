@@ -29,25 +29,14 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Login));
-            this.textbox_UserName = new System.Windows.Forms.TextBox();
             this.textbox_Password = new System.Windows.Forms.TextBox();
             this.button_Login = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
-            // 
-            // textbox_UserName
-            // 
-            this.textbox_UserName.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.textbox_UserName.Location = new System.Drawing.Point(418, 360);
-            this.textbox_UserName.Name = "textbox_UserName";
-            this.textbox_UserName.Size = new System.Drawing.Size(285, 26);
-            this.textbox_UserName.TabIndex = 1;
-            this.textbox_UserName.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
             // textbox_Password
             // 
@@ -102,6 +91,15 @@
             this.pictureBox2.TabIndex = 41;
             this.pictureBox2.TabStop = false;
             // 
+            // comboBox1
+            // 
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Location = new System.Drawing.Point(418, 367);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(285, 27);
+            this.comboBox1.TabIndex = 42;
+            this.comboBox1.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
+            // 
             // Login
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 19F);
@@ -109,11 +107,11 @@
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(972, 749);
+            this.Controls.Add(this.comboBox1);
             this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.button_Login);
             this.Controls.Add(this.textbox_Password);
-            this.Controls.Add(this.textbox_UserName);
             this.DoubleBuffered = true;
             this.Font = new System.Drawing.Font("Comic Sans MS", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Name = "Login";
@@ -126,11 +124,11 @@
         }
 
         #endregion
-        private System.Windows.Forms.TextBox textbox_UserName;
         private System.Windows.Forms.TextBox textbox_Password;
         private System.Windows.Forms.Button button_Login;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.PictureBox pictureBox2;
+        private System.Windows.Forms.ComboBox comboBox1;
     }
 }
 
