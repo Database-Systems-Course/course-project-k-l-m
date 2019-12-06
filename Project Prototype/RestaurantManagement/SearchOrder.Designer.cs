@@ -100,6 +100,7 @@
             this.textbox_CustomerNIC.Name = "textbox_CustomerNIC";
             this.textbox_CustomerNIC.Size = new System.Drawing.Size(199, 20);
             this.textbox_CustomerNIC.TabIndex = 5;
+            this.textbox_CustomerNIC.TextChanged += new System.EventHandler(this.textbox_CustomerNIC_TextChanged);
             // 
             // textbox_StaffID
             // 
@@ -107,6 +108,7 @@
             this.textbox_StaffID.Name = "textbox_StaffID";
             this.textbox_StaffID.Size = new System.Drawing.Size(199, 20);
             this.textbox_StaffID.TabIndex = 6;
+            this.textbox_StaffID.TextChanged += new System.EventHandler(this.textbox_StaffID_TextChanged);
             // 
             // textbox_OrderID
             // 
@@ -114,6 +116,7 @@
             this.textbox_OrderID.Name = "textbox_OrderID";
             this.textbox_OrderID.Size = new System.Drawing.Size(200, 20);
             this.textbox_OrderID.TabIndex = 7;
+            this.textbox_OrderID.TextChanged += new System.EventHandler(this.textbox_OrderID_TextChanged);
             // 
             // datetimepicker_OrderDate
             // 
@@ -130,6 +133,7 @@
             this.button_Search.TabIndex = 9;
             this.button_Search.Text = "Search";
             this.button_Search.UseVisualStyleBackColor = true;
+            this.button_Search.Click += new System.EventHandler(this.button_Search_Click);
             // 
             // button_View
             // 
@@ -156,8 +160,9 @@
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Location = new System.Drawing.Point(32, 161);
             this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(693, 243);
+            this.dataGridView1.Size = new System.Drawing.Size(456, 236);
             this.dataGridView1.TabIndex = 13;
+            this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
             // SearchOrder
             // 

@@ -20,8 +20,6 @@ namespace RestaurantManagement
         public SearchStaff()
         {
             InitializeComponent();
-            
-
         }
 
         private void DisplayData(string a)
@@ -102,7 +100,7 @@ namespace RestaurantManagement
                 var = var + "@NIC = NULL";
             }
 
-            Debug.WriteLine(var);
+            //Debug.WriteLine(var);
 
             if (textbox_FirstName.Text != "")
             {
@@ -155,7 +153,7 @@ namespace RestaurantManagement
             }
             else
             {
-                var = var + "," + " @   HiringDate = NULL";
+                var = var + "," + " @HiringDate = NULL";
             }
 
             //Debug.WriteLine(var);
