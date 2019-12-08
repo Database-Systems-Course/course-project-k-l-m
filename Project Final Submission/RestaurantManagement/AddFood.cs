@@ -63,17 +63,48 @@ namespace RestaurantManagement
             {
                 MessageBox.Show("Please Enter valid Food and Price");
             }
-            DbConnection db = new DbConnection();//
-            string conString = db.GetConnectionString();//
-            SqlConnection sq = new SqlConnection(conString);//
-            SqlCommand command = new SqlCommand();//
-            command.Connection = sq;
-            string sql = "select Nam from Customers";
-            command.CommandText = sql;
-            command.Parameters.AddWithValue("@NIC", textbox_CustomerNIC.Text);
-            sq.Open();
-            SqlDataReader reader = command.ExecuteReader();
+            else
+            {
 
+                string var = "";
+
+                if (textbox_CustomerNIC.Text != "")
+                {
+                    var = var + "@FoodName = '" + textbox_CustomerNIC.Text + "'";
+                }
+                else
+                {
+                    var = var + "@FoodName = NULL";
+                }
+
+                Debug.WriteLine(var);
+
+                if (textbox_StaffID.Text != "")
+                {
+                    var = var + "," + "@FoodPrice = '" + textbox_StaffID.Text + "'";
+                }
+                else
+                {
+                    var = var + "," + "@FoodPrice = NULL";
+                }
+
+                DbConnection db = new DbConnection();
+
+                con = db.conn;
+                SqlCommand cmd = new SqlCommand();
+                cmd.Connection = con;
+                con.Open();
+
+
+            Debug.WriteLine("EXEC[Add Order]" + var);
+            cmd.CommandText = "EXEC[Add Order]" + var;
+            cmd.CommandType = CommandType.Text;
+            cmd.ExecuteNonQuery();
+
+            dataGridView1.Update();
+            dataGridView1.Refresh();
+            DisplayData(val_global);
+            }
 
         }
 
@@ -138,11 +169,12 @@ namespace RestaurantManagement
                     cmd.CommandType = CommandType.Text;
                     cmd.ExecuteNonQuery();
                 }
-                dataGridView1.Update();
-                dataGridView1.Refresh();
-                DisplayData(val_global);
 
             }
+
+            dataGridView1.Update();
+            dataGridView1.Refresh();
+            DisplayData(val_global);
 
             //cmd.CommandText = "EXEC[Delete Order], " + "@FoodID = "+var;
             //cmd.CommandType = CommandType.Text;
