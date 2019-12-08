@@ -42,3 +42,19 @@ E:\GitHub\course-project-k-l-m\Project Prototype\RestaurantManagement\obj\Debug\
 E:\GitHub\course-project-k-l-m\Project Prototype\RestaurantManagement\obj\Debug\RestaurantManagement.csproj.GenerateResource.cache
 E:\GitHub\course-project-k-l-m\Project Prototype\RestaurantManagement\obj\Debug\RestaurantManagement.exe
 E:\GitHub\course-project-k-l-m\Project Prototype\RestaurantManagement\obj\Debug\RestaurantManagement.pdb
+E:\Semester(5)\Databases\project_final\course-project-k-l-m\Project Final Submission\RestaurantManagement\obj\Debug\RestaurantManagement.csprojAssemblyReference.cache
+E:\Semester(5)\Databases\project_final\course-project-k-l-m\Project Final Submission\RestaurantManagement\obj\Debug\RestaurantManagement.AddOrders.resources
+E:\Semester(5)\Databases\project_final\course-project-k-l-m\Project Final Submission\RestaurantManagement\obj\Debug\RestaurantManagement.AddStaff.resources
+E:\Semester(5)\Databases\project_final\course-project-k-l-m\Project Final Submission\RestaurantManagement\obj\Debug\RestaurantManagement.AddFood.resources
+E:\Semester(5)\Databases\project_final\course-project-k-l-m\Project Final Submission\RestaurantManagement\obj\Debug\RestaurantManagement.StaffUnPriv.resources
+E:\Semester(5)\Databases\project_final\course-project-k-l-m\Project Final Submission\RestaurantManagement\obj\Debug\RestaurantManagement.Menu.resources
+E:\Semester(5)\Databases\project_final\course-project-k-l-m\Project Final Submission\RestaurantManagement\obj\Debug\RestaurantManagement.Login.resources
+E:\Semester(5)\Databases\project_final\course-project-k-l-m\Project Final Submission\RestaurantManagement\obj\Debug\RestaurantManagement.Properties.Resources.resources
+E:\Semester(5)\Databases\project_final\course-project-k-l-m\Project Final Submission\RestaurantManagement\obj\Debug\RestaurantManagement.SearchOrder.resources
+E:\Semester(5)\Databases\project_final\course-project-k-l-m\Project Final Submission\RestaurantManagement\obj\Debug\RestaurantManagement.SearchStaff.resources
+E:\Semester(5)\Databases\project_final\course-project-k-l-m\Project Final Submission\RestaurantManagement\obj\Debug\RestaurantManagement.csproj.GenerateResource.cache
+E:\Semester(5)\Databases\project_final\course-project-k-l-m\Project Final Submission\RestaurantManagement\obj\Debug\RestaurantManagement.exe
+E:\Semester(5)\Databases\project_final\course-project-k-l-m\Project Final Submission\RestaurantManagement\obj\Debug\RestaurantManagement.pdb
+E:\Semester(5)\Databases\project_final\course-project-k-l-m\Project Final Submission\RestaurantManagement\bin\Debug\RestaurantManagement.exe.config
+E:\Semester(5)\Databases\project_final\course-project-k-l-m\Project Final Submission\RestaurantManagement\bin\Debug\RestaurantManagement.exe
+E:\Semester(5)\Databases\project_final\course-project-k-l-m\Project Final Submission\RestaurantManagement\bin\Debug\RestaurantManagement.pdb

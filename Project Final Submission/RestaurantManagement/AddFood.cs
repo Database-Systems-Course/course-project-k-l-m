@@ -17,6 +17,7 @@ namespace RestaurantManagement
     {
 
         SqlConnection con;
+        string val_global = "";
 
 
         public AddFood()
@@ -114,6 +115,7 @@ namespace RestaurantManagement
             {
                 var = var + "," + "@FoodPrice = NULL";
             }
+            val_global = var;
             DisplayData(var); 
         }
 
@@ -124,10 +126,21 @@ namespace RestaurantManagement
             con = db.conn;
             SqlCommand cmd = new SqlCommand();
             cmd.Connection = con;
+            con.Open();
 
             if (dataGridView1.SelectedCells.Count > 0)
             {
-               
+                foreach (DataGridViewRow row in dataGridView1.SelectedRows)
+                {
+                    string value1 = row.Cells[0].Value.ToString();
+                    Debug.WriteLine("EXEC[Delete Order] @FoodId = '" + value1 + "'");
+                    cmd.CommandText = "EXEC[Delete Order] @FoodId = '" + value1 + "'";
+                    cmd.CommandType = CommandType.Text;
+                    cmd.ExecuteNonQuery();
+                }
+                dataGridView1.Update();
+                dataGridView1.Refresh();
+                DisplayData(val_global);
 
             }
 
