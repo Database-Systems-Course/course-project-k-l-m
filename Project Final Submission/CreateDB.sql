@@ -1,4 +1,4 @@
---PROCEDURES
+	--PROCEDURES
 create procedure [Staff Display] @NIC integer = NULL, 
 @FirstName varchar(255)= NULL, @LastName varchar(255)= NULL, 
 @BranchId integer= NULL, @JobTitle varchar(255)= NULL, @HiringDate Date= NULL, 
@@ -40,9 +40,26 @@ GO
 
 create procedure [Delete Order] @FoodId integer
 as
+delete from OrderItems
+where FoodItems_idFood = @FoodId
 delete from FoodItems
 where idFood = @FoodId
 GO
+
+create procedure [Add Order] @FoodName varchar(255), @FoodPrice integer
+as
+insert into FoodItems(idFood,[Name],UnitPrice)
+values((select max(idFood)+1 from FoodItems),@FoodName,@FoodPrice)
+GO
+
+create procedure [Add Staff] @NIC integer, 
+@FirstName varchar(255),@LastName varchar(255), 
+@BranchId integer, @JobTitle varchar(255),
+@HiringDate Datetime, @WorkHours integer
+as
+insert into Staff(idStaff,Jobs_idJob,Branch_idBranch,NIC,FirstName,LastName,HoursPerDay)
+values ((select max(idStaff)+1 from Staff),(select idJob from Jobs where JobTitle = @JobTitle),@BranchId,@NIC,@FirstName,@LastName,@WorkHours) 
+go
 
 
 

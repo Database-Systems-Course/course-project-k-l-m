@@ -8,11 +8,14 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms; 
 using System.Data.SqlClient; //
+using System.Diagnostics;
 
 namespace RestaurantManagement//
 {
     public partial class AddStaff : Form
     {
+        SqlConnection con;
+
         public AddStaff()
         {
             InitializeComponent();
@@ -54,12 +57,42 @@ namespace RestaurantManagement//
 
         private void Button_AddStaff_Click(object sender, EventArgs e)
         {
-            DbConnection db = new DbConnection();//
-            string conString = db.GetConnectionString();//
-            SqlConnection sq = new SqlConnection(conString);//
-            SqlCommand command = new SqlCommand();//
-            sq.Open();
-            //command.CommandText = "insert into Staff  "
+            if (textbox_NIC.Text == "" || textbox_FirstName.Text == "" || comboBox2.Text == "" || comboBox1.Text == "" || textbox_DailyWorkHours.Text == "")
+            {
+                MessageBox.Show("Please enter mandatory fields");
+            }
+            else
+            {
+
+                string var = "";
+                var = var + "@NIC = '" + textbox_NIC.Text + "'" + "," + "@FirstName = '" + textbox_FirstName.Text + "'";
+  
+                if (textbox_LastName.Text != "")
+                {
+                    var = var + "," + "@LastName = '" + textbox_FirstName.Text + "'";
+                }
+                else
+                {
+                    var = var + "," + "@FirstName = NULL";
+                }
+
+                var = var + "," + "@BranchId = '" + comboBox2.Text + "'" + "," + "@HiringDate = '" + datetimepicker_HiringDate.Value.ToString("yyyy-MM-dd") + "'" + "," + "@JobTitle = '" + comboBox1.Text + "'" + "," + "@WorkHours = '" + textbox_DailyWorkHours.Text + "'";
+                Debug.WriteLine(var);
+                
+                DbConnection db = new DbConnection();
+
+                con = db.conn;
+                SqlCommand cmd = new SqlCommand();
+                cmd.Connection = con;
+                con.Open();
+
+
+                Debug.WriteLine("EXEC[Add Staff]" + var);
+                cmd.CommandText = "EXEC[Add Staff]" + var;
+                cmd.CommandType = CommandType.Text;
+                cmd.ExecuteNonQuery();
+            }
+
         }
 
         private void AddStaff_Load(object sender, EventArgs e)
@@ -93,6 +126,16 @@ namespace RestaurantManagement//
         }
 
         private void Textbox_LastName_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label_NIC_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label1_Click(object sender, EventArgs e)
         {
 
         }

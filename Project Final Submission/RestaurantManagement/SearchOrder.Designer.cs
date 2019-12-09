@@ -121,6 +121,7 @@
             this.datetimepicker_OrderDate.Name = "datetimepicker_OrderDate";
             this.datetimepicker_OrderDate.Size = new System.Drawing.Size(200, 20);
             this.datetimepicker_OrderDate.TabIndex = 8;
+            this.datetimepicker_OrderDate.ValueChanged += new System.EventHandler(this.datetimepicker_OrderDate_ValueChanged);
             // 
             // button_Search
             // 

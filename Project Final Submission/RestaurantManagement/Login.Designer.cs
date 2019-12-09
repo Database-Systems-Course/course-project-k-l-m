@@ -45,6 +45,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.textbox_Password.Location = new System.Drawing.Point(418, 475);
             this.textbox_Password.Name = "textbox_Password";
+            this.textbox_Password.PasswordChar = '*';
             this.textbox_Password.Size = new System.Drawing.Size(285, 26);
             this.textbox_Password.TabIndex = 3;
             // 
@@ -114,6 +115,8 @@
             this.Controls.Add(this.textbox_Password);
             this.DoubleBuffered = true;
             this.Font = new System.Drawing.Font("Comic Sans MS", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "Login";
             this.Text = "2";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();

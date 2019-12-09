@@ -199,5 +199,10 @@ namespace RestaurantManagement
         {
 
         }
+
+        private void datetimepicker_OrderDate_ValueChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }
