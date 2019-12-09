@@ -113,5 +113,29 @@ namespace RestaurantManagement
         {
 
         }
+
+        private void Login_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void CheckBox1_CheckedChanged(object sender, EventArgs e)
+        {
+            if (checkBox1.Checked)
+            {
+                textbox_Password.UseSystemPasswordChar= false;
+            }
+            else
+            {
+
+                textbox_Password.UseSystemPasswordChar = true;
+
+            }
+        }
+
+        private void Textbox_Password_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }
