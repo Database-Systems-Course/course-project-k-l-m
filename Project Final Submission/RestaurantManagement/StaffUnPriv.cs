@@ -29,7 +29,7 @@ namespace RestaurantManagement
 
         private void button_SearchOrder_Click(object sender, EventArgs e)
         {
-            SearchOrder Form = new SearchOrder();
+            SearchOrder Form = new SearchOrder(staff);
             this.Hide();
             Form.Show();
         }
@@ -39,6 +39,11 @@ namespace RestaurantManagement
             this.Close();
             Login Form = new Login();
             Form.Show();
+        }
+
+        private void StaffUnPriv_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

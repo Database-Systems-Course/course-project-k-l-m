@@ -12,9 +12,10 @@ namespace RestaurantManagement
 {
     public partial class AddOrders : Form
     {
+        public string f;
         public AddOrders(string staff)
         {
-            string f;
+            
             MessageBox.Show(staff);
             f = "abc";
             InitializeComponent();
@@ -54,6 +55,7 @@ namespace RestaurantManagement
             {
                comboBox1.Items.Add(reader.GetValue(0).ToString());
             }
+            f = staff ;
 
         }
 
@@ -283,7 +285,8 @@ namespace RestaurantManagement
 
         private void button_BackToMenu_Click(object sender, EventArgs e)
         {
-            StaffUnPriv Form = new StaffUnPriv("A");
+            
+            StaffUnPriv Form = new StaffUnPriv(f);
             this.Hide();
             Form.Show();
         }

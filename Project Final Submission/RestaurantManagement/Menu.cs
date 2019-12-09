@@ -31,7 +31,7 @@ namespace RestaurantManagement
 
         private void button_SearchOrder_Click(object sender, EventArgs e)
         {
-            SearchOrder Form = new SearchOrder();
+            SearchOrder Form = new SearchOrder(staff1);
             this.Hide();
             Form.Show();
         }

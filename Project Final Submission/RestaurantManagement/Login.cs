@@ -32,7 +32,7 @@ namespace RestaurantManagement
             {
                 comboBox1.Items.Add(reader.GetValue(0).ToString());
             }
-
+            comboBox1.SelectedIndex = 0;
         }
 
         private void Label3_Click(object sender, EventArgs e)

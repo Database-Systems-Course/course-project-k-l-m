@@ -59,9 +59,9 @@
             this.button_Login.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button_Login.BackgroundImage")));
             this.button_Login.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.button_Login.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button_Login.Location = new System.Drawing.Point(418, 531);
+            this.button_Login.Location = new System.Drawing.Point(429, 550);
             this.button_Login.Name = "button_Login";
-            this.button_Login.Size = new System.Drawing.Size(131, 122);
+            this.button_Login.Size = new System.Drawing.Size(92, 86);
             this.button_Login.TabIndex = 4;
             this.button_Login.UseVisualStyleBackColor = true;
             this.button_Login.Click += new System.EventHandler(this.button1_Click);
@@ -133,7 +133,7 @@
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "Login";
-            this.Text = "2";
+            this.Text = "Restaurant Management System";
             this.Load += new System.EventHandler(this.Login_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();

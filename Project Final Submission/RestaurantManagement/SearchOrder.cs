@@ -17,9 +17,10 @@ namespace RestaurantManagement
 
         SqlConnection con;
 
-
-        public SearchOrder()
+        private string f;
+        public SearchOrder(string staff)
         {
+            f = staff;
             InitializeComponent();
         }
 
@@ -71,7 +72,8 @@ namespace RestaurantManagement
 
         private void button_BackToMenu_Click(object sender, EventArgs e)
         {
-            Menu Form = new Menu("A");
+            
+            StaffUnPriv Form = new StaffUnPriv(f);
             this.Hide();
             Form.Show();
         }
