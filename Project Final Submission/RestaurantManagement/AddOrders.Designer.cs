@@ -134,12 +134,13 @@
             this.groupbox_CustomerDetails.Controls.Add(this.label_FirstName);
             this.groupbox_CustomerDetails.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupbox_CustomerDetails.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.groupbox_CustomerDetails.Location = new System.Drawing.Point(357, 175);
+            this.groupbox_CustomerDetails.Location = new System.Drawing.Point(356, 175);
             this.groupbox_CustomerDetails.Name = "groupbox_CustomerDetails";
-            this.groupbox_CustomerDetails.Size = new System.Drawing.Size(260, 135);
+            this.groupbox_CustomerDetails.Size = new System.Drawing.Size(261, 138);
             this.groupbox_CustomerDetails.TabIndex = 11;
             this.groupbox_CustomerDetails.TabStop = false;
             this.groupbox_CustomerDetails.Text = "CustomerDetails";
+            this.groupbox_CustomerDetails.Enter += new System.EventHandler(this.groupbox_CustomerDetails_Enter);
             // 
             // textbox_LastName
             // 
@@ -166,30 +167,31 @@
             // label_LastName
             // 
             this.label_LastName.AutoSize = true;
-            this.label_LastName.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.875F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label_LastName.Location = new System.Drawing.Point(14, 87);
+            this.label_LastName.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold);
+            this.label_LastName.Location = new System.Drawing.Point(26, 93);
             this.label_LastName.Name = "label_LastName";
-            this.label_LastName.Size = new System.Drawing.Size(94, 18);
+            this.label_LastName.Size = new System.Drawing.Size(90, 17);
             this.label_LastName.TabIndex = 4;
             this.label_LastName.Text = "Last Name:";
             // 
             // label_CustomerNIC
             // 
             this.label_CustomerNIC.AutoSize = true;
-            this.label_CustomerNIC.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.875F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label_CustomerNIC.Location = new System.Drawing.Point(6, 33);
+            this.label_CustomerNIC.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold);
+            this.label_CustomerNIC.Location = new System.Drawing.Point(6, 39);
             this.label_CustomerNIC.Name = "label_CustomerNIC";
-            this.label_CustomerNIC.Size = new System.Drawing.Size(120, 18);
+            this.label_CustomerNIC.Size = new System.Drawing.Size(111, 17);
             this.label_CustomerNIC.TabIndex = 1;
             this.label_CustomerNIC.Text = "Customer NIC:";
+            this.label_CustomerNIC.Click += new System.EventHandler(this.label_CustomerNIC_Click);
             // 
             // label_FirstName
             // 
             this.label_FirstName.AutoSize = true;
-            this.label_FirstName.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.875F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label_FirstName.Location = new System.Drawing.Point(14, 59);
+            this.label_FirstName.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold);
+            this.label_FirstName.Location = new System.Drawing.Point(26, 66);
             this.label_FirstName.Name = "label_FirstName";
-            this.label_FirstName.Size = new System.Drawing.Size(96, 18);
+            this.label_FirstName.Size = new System.Drawing.Size(91, 17);
             this.label_FirstName.TabIndex = 3;
             this.label_FirstName.Text = "First Name:";
             // 
@@ -208,7 +210,7 @@
             this.label_FoodItems.AutoSize = true;
             this.label_FoodItems.BackColor = System.Drawing.Color.Transparent;
             this.label_FoodItems.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.875F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label_FoodItems.Location = new System.Drawing.Point(35, 149);
+            this.label_FoodItems.Location = new System.Drawing.Point(27, 153);
             this.label_FoodItems.Name = "label_FoodItems";
             this.label_FoodItems.Size = new System.Drawing.Size(98, 18);
             this.label_FoodItems.TabIndex = 16;

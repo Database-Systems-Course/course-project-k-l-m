@@ -73,7 +73,7 @@ namespace RestaurantManagement//
                 }
                 else
                 {
-                    var = var + "," + "@FirstName = NULL";
+                    var = var + "," + "@LastName = NULL";
                 }
 
                 var = var + "," + "@BranchId = '" + comboBox2.Text + "'" + "," + "@HiringDate = '" + datetimepicker_HiringDate.Value.ToString("yyyy-MM-dd") + "'" + "," + "@JobTitle = '" + comboBox1.Text + "'" + "," + "@WorkHours = '" + textbox_DailyWorkHours.Text + "'";

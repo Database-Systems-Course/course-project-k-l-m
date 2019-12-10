@@ -339,6 +339,16 @@ namespace RestaurantManagement
         {
 
         }
+
+        private void groupbox_CustomerDetails_Enter(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label_CustomerNIC_Click(object sender, EventArgs e)
+        {
+
+        }
     }
     
 }
