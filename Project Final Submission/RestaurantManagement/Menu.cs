@@ -71,5 +71,12 @@ namespace RestaurantManagement
             AddFood Form = new AddFood();
             Form.Show();
         }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            this.Close();
+            Login Form = new Login();
+            Form.Show();
+        }
     }
 }

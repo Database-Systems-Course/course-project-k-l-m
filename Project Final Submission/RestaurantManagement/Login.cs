@@ -77,7 +77,7 @@ namespace RestaurantManagement
             {
                 id2 = int.Parse(reader.GetValue(0).ToString());
             }
-            if (isStaff == true & textbox_Password.Text.ToString() == "iamstaff" && id2 != 1)
+            if (isStaff == true & textbox_Password.Text.ToString() == "iamstaff" )
             {
                 MessageBox.Show("Successful login by " + StaffName);
                 StaffUnPriv Form = new StaffUnPriv(StaffName);
@@ -85,7 +85,7 @@ namespace RestaurantManagement
                 Form.Show();
 
             }
-            if (id2 == 1 && isManager == true && textbox_Password.Text.ToString() == "iammanager")
+            else if (id2 == 1 && isManager == true && textbox_Password.Text.ToString() == "iammanager")
             {
                 MessageBox.Show("Successful login by " + StaffName);
                 Menu Form = new Menu(StaffName);
