@@ -205,5 +205,10 @@ namespace RestaurantManagement
         {
                 
         }
+
+        private void textbox_LastName_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

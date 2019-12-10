@@ -88,6 +88,7 @@
             this.textbox_LastName.Name = "textbox_LastName";
             this.textbox_LastName.Size = new System.Drawing.Size(177, 20);
             this.textbox_LastName.TabIndex = 27;
+            this.textbox_LastName.TextChanged += new System.EventHandler(this.textbox_LastName_TextChanged);
             // 
             // textbox_FirstName
             // 

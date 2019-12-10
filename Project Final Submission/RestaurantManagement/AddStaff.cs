@@ -57,7 +57,7 @@ namespace RestaurantManagement//
 
         private void Button_AddStaff_Click(object sender, EventArgs e)
         {
-            if (textbox_NIC.Text == "" || textbox_FirstName.Text == "" || comboBox2.Text == "" || comboBox1.Text == "" || textbox_DailyWorkHours.Text == "")
+            if (textbox_NIC.Text == "" || textbox_LastName.Text == "" || textbox_FirstName.Text == "" || comboBox2.Text == "" || comboBox1.Text == "" || textbox_DailyWorkHours.Text == "")
             {
                 MessageBox.Show("Please enter mandatory fields");
             }
@@ -65,16 +65,8 @@ namespace RestaurantManagement//
             {
 
                 string var = "";
-                var = var + "@NIC = '" + textbox_NIC.Text + "'" + "," + "@FirstName = '" + textbox_FirstName.Text + "'";
-  
-                if (textbox_LastName.Text != "")
-                {
-                    var = var + "," + "@LastName = '" + textbox_FirstName.Text + "'";
-                }
-                else
-                {
-                    var = var + "," + "@LastName = NULL";
-                }
+                var = var + "@NIC = '" + textbox_NIC.Text + "'" + "," + "@FirstName = '" + textbox_FirstName.Text + "'" + "," + "@LastName = '" + textbox_LastName.Text + "'";
+ 
 
                 var = var + "," + "@BranchId = '" + comboBox2.Text + "'" + "," + "@HiringDate = '" + datetimepicker_HiringDate.Value.ToString("yyyy-MM-dd") + "'" + "," + "@JobTitle = '" + comboBox1.Text + "'" + "," + "@WorkHours = '" + textbox_DailyWorkHours.Text + "'";
                 Debug.WriteLine(var);
@@ -91,6 +83,8 @@ namespace RestaurantManagement//
                 cmd.CommandText = "EXEC[Add Staff]" + var;
                 cmd.CommandType = CommandType.Text;
                 cmd.ExecuteNonQuery();
+
+                MessageBox.Show("Staff added successfully");
             }
 
         }
@@ -138,6 +132,11 @@ namespace RestaurantManagement//
         private void label1_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void label_LastName_Click(object sender, EventArgs e)
+        {
+                
         }
     }
 }
