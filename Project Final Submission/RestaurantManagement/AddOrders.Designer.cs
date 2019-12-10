@@ -58,9 +58,10 @@
             // 
             // dateTimePicker1
             // 
+            this.dateTimePicker1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dateTimePicker1.Location = new System.Drawing.Point(424, 74);
             this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(195, 20);
+            this.dateTimePicker1.Size = new System.Drawing.Size(200, 24);
             this.dateTimePicker1.TabIndex = 10;
             this.dateTimePicker1.ValueChanged += new System.EventHandler(this.dateTimePicker1_ValueChanged);
             // 
@@ -194,10 +195,11 @@
             // 
             // combobox_FoodItems
             // 
+            this.combobox_FoodItems.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.combobox_FoodItems.FormattingEnabled = true;
             this.combobox_FoodItems.Location = new System.Drawing.Point(131, 149);
             this.combobox_FoodItems.Name = "combobox_FoodItems";
-            this.combobox_FoodItems.Size = new System.Drawing.Size(147, 21);
+            this.combobox_FoodItems.Size = new System.Drawing.Size(147, 26);
             this.combobox_FoodItems.TabIndex = 15;
             this.combobox_FoodItems.SelectedIndexChanged += new System.EventHandler(this.combobox_FoodItems_SelectedIndexChanged);
             // 
@@ -228,10 +230,12 @@
             // OrderedItems
             // 
             this.OrderedItems.BackColor = System.Drawing.Color.OldLace;
+            this.OrderedItems.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.OrderedItems.FormattingEnabled = true;
+            this.OrderedItems.ItemHeight = 18;
             this.OrderedItems.Location = new System.Drawing.Point(54, 261);
             this.OrderedItems.Name = "OrderedItems";
-            this.OrderedItems.Size = new System.Drawing.Size(182, 186);
+            this.OrderedItems.Size = new System.Drawing.Size(182, 184);
             this.OrderedItems.TabIndex = 18;
             this.OrderedItems.SelectedIndexChanged += new System.EventHandler(this.OrderedItems_SelectedIndexChanged);
             // 
@@ -261,20 +265,23 @@
             // QtyTextBox
             // 
             this.QtyTextBox.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.QtyTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.QtyTextBox.Location = new System.Drawing.Point(146, 186);
             this.QtyTextBox.Margin = new System.Windows.Forms.Padding(2);
             this.QtyTextBox.Name = "QtyTextBox";
-            this.QtyTextBox.Size = new System.Drawing.Size(52, 20);
+            this.QtyTextBox.Size = new System.Drawing.Size(52, 22);
             this.QtyTextBox.TabIndex = 21;
             this.QtyTextBox.Text = "1";
             // 
             // Quantity
             // 
             this.Quantity.BackColor = System.Drawing.Color.OldLace;
+            this.Quantity.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Quantity.FormattingEnabled = true;
+            this.Quantity.ItemHeight = 18;
             this.Quantity.Location = new System.Drawing.Point(236, 261);
             this.Quantity.Name = "Quantity";
-            this.Quantity.Size = new System.Drawing.Size(68, 186);
+            this.Quantity.Size = new System.Drawing.Size(68, 184);
             this.Quantity.TabIndex = 22;
             this.Quantity.SelectedIndexChanged += new System.EventHandler(this.Quantity_SelectedIndexChanged);
             // 

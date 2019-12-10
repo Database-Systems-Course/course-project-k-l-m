@@ -79,6 +79,7 @@ namespace RestaurantManagement
             }
             if (isStaff == true & textbox_Password.Text.ToString() == "iamstaff" && id2 != 1)
             {
+                MessageBox.Show("Successful login by " + StaffName);
                 StaffUnPriv Form = new StaffUnPriv(StaffName);
                 this.Hide();
                 Form.Show();
@@ -86,12 +87,16 @@ namespace RestaurantManagement
             }
             if (id2 == 1 && isManager == true && textbox_Password.Text.ToString() == "iammanager")
             {
-                MessageBox.Show(StaffName);
+                MessageBox.Show("Successful login by " + StaffName);
                 Menu Form = new Menu(StaffName);
                 this.Hide();
                 Form.Show();
-                
             }
+            else
+            {
+                MessageBox.Show("Access Denied. Use your correct password to login.");
+            }
+
         }
 
         private void button2_Click(object sender, EventArgs e)
